@@ -170,8 +170,8 @@ img {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
   gap: 2rem;
-  align-items: center;
-  padding: 3rem 0 2rem;
+  align-items: start;
+  padding: 2.2rem 0 2rem;
 }
 
 .eyebrow {
@@ -324,6 +324,108 @@ h1 {
   border: 1px solid rgba(255,255,255,0.12);
 }
 
+.lab-panel {
+  padding: 1.35rem;
+  background: linear-gradient(135deg, rgba(10, 15, 26, 0.95), rgba(24, 35, 56, 0.88));
+  border: 1px solid rgba(120, 170, 255, 0.24);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255,255,255,0.06);
+  backdrop-filter: blur(16px);
+}
+
+/* Elevar visualmente el panel clínico en desktop */
+.lab-panel {
+  margin-top: -36px;
+  position: relative;
+  z-index: 50;
+}
+
+.lab-panel__top {
+  margin-bottom: 1rem;
+}
+
+.eyebrow--small {
+  font-size: 0.72rem;
+  margin-bottom: 0.5rem;
+}
+
+.lab-panel h2 {
+  font-size: 1.3rem;
+  margin: 0 0 0.5rem;
+}
+
+.lab-panel__subtitle {
+  color: var(--muted);
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+.lab-options {
+  display: grid;
+  gap: 0.75rem;
+  margin: 1rem 0 1.1rem;
+}
+
+.lab-option {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: start;
+  gap: 0.75rem;
+  padding: 0.85rem 0.9rem;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 0.95rem;
+  background: rgba(255,255,255,0.03);
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.lab-option:hover {
+  transform: translateY(-2px);
+  border-color: rgba(47, 124, 246, 0.45);
+  background: rgba(47, 124, 246, 0.08);
+}
+
+.lab-option.is-active {
+  border-color: rgba(47, 124, 246, 0.6);
+  background: linear-gradient(90deg, rgba(47, 124, 246, 0.15), rgba(255,255,255,0.03));
+}
+
+.lab-option__icon {
+  width: 2.15rem;
+  height: 2.15rem;
+  display: grid;
+  place-items: center;
+  border-radius: 0.8rem;
+  background: rgba(47, 124, 246, 0.16);
+  font-size: 1rem;
+}
+
+.lab-option__content h3 {
+  margin: 0 0 0.25rem;
+  font-size: 0.98rem;
+  color: white;
+}
+
+.lab-option__content p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.84rem;
+  line-height: 1.45;
+}
+
+.lab-option__check {
+  color: #8ec5ff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-top: 0.15rem;
+}
+
+.lab-panel__cta {
+  width: 100%;
+  padding: 0.95rem 1rem;
+  justify-content: center;
+  border-radius: 999px;
+}
+
 .hero-card ul {
   padding-left: 1rem;
   color: var(--muted);
@@ -448,6 +550,68 @@ h1 {
   box-shadow: var(--shadow);
 }
 
+.testimonial-form {
+  background: linear-gradient(135deg, rgba(47,124,246,0.16), rgba(255,255,255,0.04));
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 1.25rem;
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.testimonial-form input,
+.testimonial-form textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 0.9rem;
+  padding: 0.85rem 1rem;
+  background: rgba(255,255,255,0.04);
+  color: white;
+  font: inherit;
+}
+
+.testimonial-form textarea {
+  resize: vertical;
+  min-height: 100px;
+  margin-bottom: 0.8rem;
+}
+
+.testimonial-form input::placeholder,
+.testimonial-form textarea::placeholder {
+  color: #9bb0c9;
+}
+
+.rating-input {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.rating-option {
+  cursor: pointer;
+  color: #4a5568;
+  font-size: 1.2rem;
+}
+
+.rating-option input {
+  display: none;
+}
+
+.rating-option input:checked + span,
+.rating-option:hover span {
+  color: #ffd166;
+}
+
+.testimonial-note {
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
 .stars {
   color: #ffd166;
   font-size: 1.1rem;
@@ -479,6 +643,69 @@ h1 {
 .testimonial-cta p {
   margin: 0;
   color: var(--muted);
+}
+
+.contact-shell {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 1.5rem;
+  background: linear-gradient(135deg, rgba(47,124,246,0.16), rgba(255,255,255,0.03));
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+.contact-copy h2 {
+  margin: 0.4rem 0 0.6rem;
+}
+
+.contact-copy p {
+  color: var(--muted);
+}
+
+.contact-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+
+.contact-highlights span {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 0.55rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  color: #eaf2ff;
+}
+
+.contact-form {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 0.95rem;
+  padding: 0.9rem 1rem;
+  background: rgba(255,255,255,0.04);
+  color: white;
+  font: inherit;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+
+.contact-form input::placeholder,
+.contact-form select::placeholder,
+.contact-form textarea::placeholder {
+  color: #9bb0c9;
 }
 
 .benefit-card {
@@ -638,7 +865,7 @@ h1 {
 .whatsapp-float {
   position: fixed;
   bottom: 2rem;
-  right: 2rem;
+  right: 1.5rem;
   width: 60px;
   height: 60px;
   background: linear-gradient(135deg, #25d366, #20ba5c);
@@ -657,6 +884,31 @@ h1 {
 .whatsapp-float:hover {
   transform: scale(1.15);
   box-shadow: 0 15px 40px rgba(37, 211, 102, 0.6), 0 0 30px rgba(37, 211, 102, 0.3);
+}
+
+.reserve-float {
+  position: fixed;
+  bottom: 6.2rem;
+  right: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: white;
+  text-decoration: none;
+  border-radius: 50%;
+  box-shadow: 0 10px 30px rgba(47, 124, 246, 0.35), 0 0 20px rgba(47, 124, 246, 0.2);
+  z-index: 1000;
+  font-weight: 700;
+  font-size: 1.35rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.reserve-float:hover {
+  transform: translateY(-3px) scale(1.08);
+  box-shadow: 0 15px 40px rgba(47, 124, 246, 0.45), 0 0 30px rgba(47, 124, 246, 0.3);
 }
 
 .whatsapp-icon {
@@ -795,6 +1047,22 @@ h1 {
     align-items: flex-start;
   }
 
+  .contact-shell {
+    grid-template-columns: 1fr;
+  }
+
+  /* Quitar el margen negativo en móvil para evitar solapamientos */
+  .lab-panel {
+    margin-top: 0;
+    position: static;
+    z-index: auto;
+  }
+
+  .form-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
   .contact-buttons .btn {
     width: 100%;
   }
@@ -813,6 +1081,14 @@ h1 {
     width: 55px;
     height: 55px;
     font-size: 1.3rem;
+  }
+
+  .reserve-float {
+    bottom: 5.5rem;
+    right: 1.2rem;
+    width: 55px;
+    height: 55px;
+    font-size: 1.2rem;
   }
 
   .promo-section {
