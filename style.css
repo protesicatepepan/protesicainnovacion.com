@@ -3,12 +3,15 @@
   --bg: #06080d;
   --surface: #121723;
   --surface-2: #1a2233;
+  --surface-elevated: rgba(255, 255, 255, 0.05);
   --text: #ffffff;
   --muted: #b3becf;
   --primary: #2f7cf6;
   --primary-dark: #1458c7;
+  --accent: #5eead4;
   --border: #263449;
   --shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+  --shadow-soft: 0 12px 30px rgba(0, 0, 0, 0.2);
 }
 
 * {
@@ -27,6 +30,9 @@ body {
     radial-gradient(circle at top left, rgba(47, 124, 246, 0.16), transparent 28%),
     var(--bg);
   line-height: 1.6;
+  min-height: 100vh;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
 
 img {
@@ -35,7 +41,7 @@ img {
 }
 
 .container {
-  width: min(1120px, calc(100% - 2rem));
+  width: min(1180px, calc(100% - 2rem));
   margin: 0 auto;
 }
 
@@ -76,15 +82,16 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.2rem 1.2rem;
+  padding: 1rem 1.2rem;
   margin-top: 1rem;
-  border: 1px solid rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.12);
   border-radius: 999px;
-  background: rgba(6, 8, 13, 0.6);
-  backdrop-filter: blur(14px);
+  background: rgba(6, 8, 13, 0.72);
+  backdrop-filter: blur(16px);
   position: sticky;
   top: 1rem;
   z-index: 100;
+  box-shadow: var(--shadow-soft);
 }
 
 .brand {
@@ -152,7 +159,26 @@ img {
 
 .nav-links {
   display: flex;
+  align-items: center;
   gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 0.25rem;
+  background: transparent;
+  border: 0;
+  padding: 0.35rem;
+  cursor: pointer;
+}
+
+.nav-toggle span {
+  width: 1.45rem;
+  height: 2px;
+  background: white;
+  border-radius: 999px;
 }
 
 .nav-links a {
@@ -168,10 +194,10 @@ img {
 
 .hero-content {
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
+  grid-template-columns: 1.1fr 0.9fr;
   gap: 1.5rem;
   align-items: center;
-  padding: 2rem 0 2rem;
+  padding: 2.5rem 0 2rem;
 }
 
 .eyebrow {
@@ -238,11 +264,12 @@ h1 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.9rem 1.2rem;
+  padding: 0.92rem 1.2rem;
   border-radius: 999px;
   text-decoration: none;
   font-weight: 600;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  box-shadow: var(--shadow-soft);
 }
 
 .btn:hover {
@@ -322,6 +349,7 @@ h1 {
   opacity: 0;
   background: linear-gradient(135deg, rgba(18,23,35,0.98), rgba(32,43,64,0.95));
   border: 1px solid rgba(255,255,255,0.12);
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.3);
 }
 
 .lab-panel {
@@ -438,6 +466,18 @@ h1 {
 
 .section-heading {
   margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.section-heading::after {
+  content: "";
+  display: block;
+  width: 72px;
+  height: 3px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  margin-top: 0.65rem;
 }
 
 .split-grid {
@@ -445,6 +485,7 @@ h1 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.5rem;
   color: var(--muted);
+  font-size: 1.02rem;
 }
 
 .card-grid {
@@ -502,13 +543,13 @@ h1 {
 
 .benefits-grid {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 1.25rem;
 }
 
 .stats-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 1rem;
 }
 
@@ -535,8 +576,9 @@ h1 {
 
 .testimonials-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.25rem;
+  margin-top: 1.25rem;
 }
 
 .testimonial-card {
@@ -748,7 +790,7 @@ h1 {
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(7, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
   gap: 1rem;
 }
 
@@ -1009,24 +1051,40 @@ h1 {
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   .hero-content,
   .split-grid,
   .card-grid,
-  .benefits-grid,
-  .services-grid,
   .process-grid,
-  .testimonials-grid,
-  .stats-grid,
-  .gallery-grid {
+  .gallery-grid,
+  .contact-shell {
     grid-template-columns: 1fr;
   }
 
   .nav {
-    flex-direction: column;
+    flex-wrap: wrap;
     gap: 0.8rem;
     border-radius: 1.25rem;
     padding: 1rem;
+  }
+
+  .nav-toggle {
+    display: inline-flex;
+    margin-left: auto;
+  }
+
+  .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.65rem;
+    padding-top: 0.4rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .nav.is-open .nav-links {
+    display: flex;
   }
 
   .footer-content {

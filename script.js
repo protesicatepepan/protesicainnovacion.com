@@ -67,6 +67,26 @@ function renderTestimonials() {
 document.addEventListener('DOMContentLoaded', () => {
   const year = new Date().getFullYear();
   const footer = document.querySelector('.footer p');
+  const nav = document.querySelector('.nav');
+  const navToggle = document.getElementById('nav-toggle');
+
+  if (navToggle && nav) {
+    navToggle.addEventListener('click', () => {
+      const isOpen = nav.classList.toggle('is-open');
+      navToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+  }
+
+  document.querySelectorAll('.nav-links a').forEach((link) => {
+    link.addEventListener('click', () => {
+      if (nav) {
+        nav.classList.remove('is-open');
+      }
+      if (navToggle) {
+        navToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
 
   if (footer) {
     footer.textContent += ` © ${year}`;
