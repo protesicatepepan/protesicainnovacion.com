@@ -1120,19 +1120,39 @@ h1 {
 
 /* Sección de Promoción */
 .promo-section {
-  background: linear-gradient(135deg, #ff6b35 0%, #f7931e 50%, #fdb750 100%);
-  padding: 3rem 2rem;
-  margin: 3rem 0;
-  border-radius: 1.5rem;
+  background: linear-gradient(135deg, #ff6b35 0%, #f7931e 45%, #fdb750 100%);
+  padding: 3.5rem 2rem;
+  margin: 3.5rem 0;
+  border-radius: 2rem;
   text-align: center;
-  box-shadow: 0 20px 60px rgba(255, 107, 53, 0.3);
+  box-shadow: 0 26px 80px rgba(255, 107, 53, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  position: relative;
+  overflow: hidden;
   animation: promoSlideIn 1s ease-out 1s forwards;
   opacity: 0;
 }
 
+.promo-section::before {
+  content: "DESCUENTO"
+  ;
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(255,255,255,0.14);
+  font-size: 5rem;
+  letter-spacing: 0.35em;
+  font-weight: 800;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
 .promo-content {
-  max-width: 600px;
+  max-width: 640px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
 
 .promo-badge {
@@ -1148,35 +1168,40 @@ h1 {
 }
 
 .promo-title {
-  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
   color: white;
-  margin: 0.5rem 0;
-  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  margin: 0.4rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
   animation: bounce 0.8s ease-out 1.3s forwards;
   opacity: 0;
 }
 
 .promo-subtitle {
-  font-size: 1.3rem;
-  color: rgba(255, 255, 255, 0.95);
-  margin: 0.5rem 0 1.5rem;
-  font-weight: 500;
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.98);
+  margin: 0.75rem auto 1.5rem;
+  font-weight: 600;
+  max-width: 520px;
+  line-height: 1.6;
 }
 
 .btn-promo {
   background: white;
   color: #ff6b35;
-  font-weight: 700;
-  padding: 1rem 2rem;
-  font-size: 1.1rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-weight: 800;
+  padding: 1.1rem 2.3rem;
+  font-size: 1.15rem;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.22);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  border-radius: 999px;
 }
 
 .btn-promo:hover {
   transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
-  background: #f0f0f0;
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.28);
+  background: #fcf2ed;
 }
 
 @keyframes promoSlideIn {
