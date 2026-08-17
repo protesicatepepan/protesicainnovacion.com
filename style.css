@@ -623,7 +623,7 @@ h1 {
 
 .galeria-section {
   padding: 90px 0;
-  background: #f7f9fb;
+  background: linear-gradient(180deg, #0d1320 0%, #121a2b 100%);
   overflow: hidden;
 }
 
@@ -645,18 +645,19 @@ h1 {
   font-weight: 700;
   letter-spacing: 2px;
   margin-bottom: 12px;
-  color: #1677c8;
+  color: #7cc7ff;
 }
 
 .galeria-header h2 {
   margin: 0 0 15px;
   font-size: clamp(32px, 5vw, 48px);
   line-height: 1.1;
+  color: #ffffff;
 }
 
 .galeria-header p {
   margin: 0;
-  color: #667085;
+  color: #c1cfde;
   font-size: 16px;
   line-height: 1.7;
 }
@@ -684,11 +685,12 @@ h1 {
 
   border-radius: 18px;
   overflow: hidden;
-  background: #ffffff;
+  background: #1a2333;
+  border: 1px solid rgba(255,255,255,0.08);
 
   scroll-snap-align: start;
 
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 
   transition: transform 0.3s ease,
               box-shadow 0.3s ease;
@@ -725,7 +727,7 @@ h1 {
 
 .galeria-drive p {
   margin-bottom: 15px;
-  color: #667085;
+  color: #d7e5f5;
   font-size: 15px;
 }
 
@@ -738,10 +740,10 @@ h1 {
 
   border-radius: 10px;
 
-  background: #ffffff;
-  color: #1677c8;
+  background: linear-gradient(135deg, #2f7cf6, #5eead4);
+  color: #ffffff;
 
-  border: 1px solid #d7e2ec;
+  border: 1px solid rgba(255,255,255,0.12);
 
   text-decoration: none;
   font-weight: 600;
@@ -751,7 +753,7 @@ h1 {
 
 .btn-drive:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 20px rgba(47, 124, 246, 0.25);
 }
 
 /* =========================
