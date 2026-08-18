@@ -1,493 +1,2140 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Enfoque en innovación y laboratorio: prótesis dentales con tecnología CAD/CAM, atención personalizada y soluciones de alta precisión." />
-    <title>Protesica Tepepan</title>
-    <!-- Open Graph / Twitter -->
-    <meta property="og:title" content="Protesica Tepepan — Innovación Dental" />
-    <meta property="og:description" content="Prótesis dentales de alta precisión con tecnología CAD/CAM. Atención personalizada y resultados duraderos." />
-    <meta property="og:image" content="assets/logo.png" />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Protesica Tepepan — Innovación Dental" />
-    <meta name="twitter:description" content="Prótesis dentales de alta precisión con tecnología CAD/CAM. Atención personalizada y resultados duraderos." />
-    <meta name="twitter:image" content="assets/logo.png" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="icon" href="assets/logo.png" type="image/png" />
-    <link rel="manifest" href="/manifest.json" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header class="hero">
-      <nav class="nav container" aria-label="Navegación principal">
-        <a class="brand" href="#inicio">
-          <img src="assets/logo.png" alt="Logotipo de Protesica Tepepan" />
-          <span>Protesica Tepepan</span>
-        </a>
-        <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Abrir menú">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-        <div class="nav-links" id="primary-nav">
-          <a href="#nosotros">Nosotros</a>
-          <a href="#servicios">Servicios</a>
-          <a href="#galeria">Galería</a>
-          <a href="#testimonios">Reseñas</a>
-          <a href="#contacto">Contacto</a>
-        </div>
-      </nav>
+  <meta
+    name="description"
+    content="Enfoque en innovación y laboratorio: prótesis dentales con tecnología CAD/CAM, atención personalizada y soluciones de alta precisión."
+  />
 
-      <section class="hero-content container" id="inicio">
-        <div class="hero-card lab-panel" aria-label="Laboratorio dental para clínicas y odontólogos">
-          <div class="lab-panel__top">
-            <p class="eyebrow eyebrow--small">Laboratorio dental</p>
-            <h2>Laboratorio dental para clínicas y odontólogos</h2>
-            <p class="lab-panel__subtitle">
-              Recogemos, fabricamos y entregamos restauraciones para clínicas y odontólogos con precisión,
-              tiempos confiables y acompañamiento técnico en cada caso clínico.
-            </p>
-          </div>
+  <title>Protesica Tepepan</title>
 
-          <div class="lab-options">
-            <article class="lab-option is-active">
-              <div class="lab-option__icon">🦷</div>
-              <div class="lab-option__content">
-                <h3>Prótesis de alta precisión</h3>
-                <p>Diseño y fabricación de restauraciones con enfoque en ajuste, estética y funcionalidad clínica.</p>
-              </div>
-              <span class="lab-option__check">✓</span>
-            </article>
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Protesica Tepepan — Innovación Dental" />
+  <meta
+    property="og:description"
+    content="Prótesis dentales de alta precisión con tecnología CAD/CAM. Atención personalizada y resultados duraderos."
+  />
+  <meta property="og:image" content="assets/logo.png" />
+  <meta property="og:type" content="website" />
 
-            <article class="lab-option">
-              <div class="lab-option__icon">💬</div>
-              <div class="lab-option__content">
-                <h3>Comunicación directa con el laboratorio</h3>
-                <p>Seguimiento cercano de cada caso, resolución de dudas y coordinación clara durante todo el proceso.</p>
-              </div>
-              <span class="lab-option__check">↗</span>
-            </article>
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Protesica Tepepan — Innovación Dental" />
+  <meta
+    name="twitter:description"
+    content="Prótesis dentales de alta precisión con tecnología CAD/CAM. Atención personalizada y resultados duraderos."
+  />
+  <meta name="twitter:image" content="assets/logo.png" />
 
-            <article class="lab-option">
-              <div class="lab-option__icon">🛠️</div>
-              <div class="lab-option__content">
-                <h3>Soporte técnico para cada caso</h3>
-                <p>Acompañamiento en planificación, materiales y detalles de fabricación para lograr mejores resultados clínicos.</p>
-              </div>
-              <span class="lab-option__check">●</span>
-            </article>
-          </div>
+  <link rel="icon" href="assets/logo.png" type="image/png" />
+  <link rel="manifest" href="/manifest.json" />
 
-          <a class="btn btn-primary lab-panel__cta" href="#contacto-form">Enviar caso clínico</a>
-        </div>
-        <div>
-          <p class="eyebrow">Laboratorio dental</p>
-          <h1>Soluciones de laboratorio para odontólogos y clínicas</h1>
-          <p class="hero-copy">
-            Recogemos, fabricamos y entregamos restauraciones con precisión, tiempos confiables y acompañamiento técnico en cada caso clínico.
-          </p>
-          <ul class="hero-benefits">
-            <li>Restauraciones con alta precisión y excelente acabado</li>
-            <li>Atención directa y seguimiento por WhatsApp</li>
-            <li>Flujo digital y soporte técnico para cada caso</li>
-          </ul>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#contacto-form">Enviar caso por WhatsApp</a>
-            <a class="btn btn-secondary" href="#servicios">Ver servicios</a>
-          </div>
-        </div>
-      </section>
-      
-      <section id="galeria" class="galeria-section">
-        <div class="galeria-container">
-          <div class="galeria-header">
-            <span class="galeria-etiqueta">NUESTROS TRABAJOS</span>
-            <h2>Galería clínica</h2>
-            <p>
-              Conoce una selección de nuestros trabajos realizados
-              con precisión, estética y tecnología digital.
-            </p>
-          </div>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-          <div class="galeria-slider">
-            <div class="galeria-item">
-              <img src="logo.png/Galeria%20Tepepan/trabajo1.jfif" alt="Trabajo dental 1" loading="lazy">
-            </div>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
 
-            <div class="galeria-item">
-              <img src="logo.png/Galeria%20Tepepan/trabajo2.jfif" alt="Trabajo dental 2" loading="lazy">
-            </div>
+  <link rel="stylesheet" href="style.css" />
 
-            <div class="galeria-item">
-              <img src="logo.png/Galeria%20Tepepan/trabajo3.jfif" alt="Trabajo dental 3" loading="lazy">
-            </div>
+  <!-- =====================================================
+       TEMÁTICA MENSUAL
+       Solo agrega decoración. No modifica la estructura.
+       ===================================================== -->
 
-            <div class="galeria-item">
-              <img src="logo.png/Galeria%20Tepepan/trabajo5.jfif" alt="Trabajo dental 5" loading="lazy">
-            </div>
+  <style>
 
-            <div class="galeria-item">
-              <img src="logo.png/Galeria%20Tepepan/trabajo6.jfif" alt="Trabajo dental 6" loading="lazy">
-            </div>
+    /* =====================================================
+       CAPA GENERAL
+       ===================================================== */
 
-            <div class="galeria-item">
-              <img src="logo.png/Galeria%20Tepepan/trabajo7.jfif" alt="Trabajo dental 7" loading="lazy">
-            </div>
+    #tema-mensual {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 9999;
+      overflow: hidden;
+    }
 
-            <div class="galeria-item">
-              <img src="logo.png/Galeria%20Tepepan/trabajo8.jfif" alt="Trabajo dental 8" loading="lazy">
-            </div>
-
-            <div class="galeria-item">
-              <img src="logo.png/Galeria%20Tepepan/trabajo9.jfif" alt="Trabajo dental 9" loading="lazy">
-            </div>
-
-            <div class="galeria-item">
-              <img src="logo.png/Galeria%20Tepepan/trabajo10.jfif" alt="Trabajo dental 10" loading="lazy">
-            </div>
-
-            <div class="galeria-item">
-              <img src="logo.png/Galeria%20Tepepan/trabajo11.jfif" alt="Trabajo dental 11" loading="lazy">
-            </div>
-
-            <div class="galeria-item">
-              <img src="logo.png/Galeria%20Tepepan/trabajo12.jfif" alt="Trabajo dental 12" loading="lazy">
-            </div>
-
-            <div class="galeria-item">
-              <img src="logo.png/Galeria%20Tepepan/trabajo13.jfif" alt="Trabajo dental 13" loading="lazy">
-            </div>
-
-            <div class="galeria-item">
-              <img src="logo.png/Galeria%20Tepepan/trabajo14.jfif" alt="Trabajo dental 14" loading="lazy">
-            </div>
-
-            <div class="galeria-item">
-              <img src="logo.png/Galeria%20Tepepan/trabajo15.jfif" alt="Trabajo dental 15" loading="lazy">
-            </div>
-
-            <div class="galeria-item">
-              <img src="logo.png/Galeria%20Tepepan/trabajo16.jfif" alt="Trabajo dental 16" loading="lazy">
-            </div>
-
-            <div class="galeria-item">
-              <img src="logo.png/Galeria%20Tepepan/trabajo17.jfif" alt="Trabajo dental 17" loading="lazy">
-            </div>
-
-            <div class="galeria-item">
-              <img src="logo.png/Galeria%20Tepepan/trabajo18.jfif" alt="Trabajo dental 18" loading="lazy">
-            </div>
-          </div>
-
-          <div class="galeria-drive">
-            <p>¿Quieres conocer más de nuestro trabajo?</p>
-
-            <a href="https://drive.google.com/drive/folders/1Lih1ISUAmoxvOKKQoEO64DxQlghLXvYN"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="btn-drive">
-              📁 Ver galería completa en Google Drive
-            </a>
-          </div>
-        </div>
-      </section>
-    </header>
-
-    <main>
-      <section class="section container" id="nosotros">
-        <div class="section-heading">
-          <p class="eyebrow">Sobre nosotros</p>
-          <h2>Innovación, precisión y respaldo para tu práctica dental</h2>
-        </div>
-        <div class="split-grid">
-          <p>
-            En Protésica Innovación colaboramos con odontólogos, especialistas y clínicas dentales que buscan un laboratorio confiable para sus restauraciones. Nuestro enfoque combina técnica, estética y comunicación directa, para ofrecer soluciones que se adapten a las necesidades de cada caso clínico.
-          </p>
-          <p>
-            Trabajamos con un compromiso claro: calidad en cada pieza, seguimiento puntual y apoyo técnico durante el proceso, para que tu práctica cuente con un laboratorio que entienda la importancia de cada detalle.
-          </p>
-        </div>
-      </section>
-
-      <section class="section section-alt" id="servicios">
-        <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow">Servicios</p>
-            <h2>Servicios de laboratorio dental</h2>
-          </div>
-          <p class="section-copy">
-            Ofrecemos soluciones protésicas y restaurativas para clínicas y odontólogos que buscan precisión,
-            estética y un flujo de trabajo más confiable.
-          </p>
-          <div class="services-grid">
-            <article class="service-card">
-              <h3>Coronas de zirconia</h3>
-              <p>Restauraciones con excelente resistencia, ajuste preciso y una estética natural para casos que requieren durabilidad y alta calidad en terminación.</p>
-            </article>
-            <article class="service-card">
-              <h3>Prótesis fijas</h3>
-              <p>Soluciones diseñadas para devolver función, estabilidad y armonía oclusal, cuidando la adaptación clínica y el resultado final del tratamiento.</p>
-            </article>
-            <article class="service-card">
-              <h3>Prótesis removibles</h3>
-              <p>Opciones protésicas elaboradas con atención al detalle, comodidad del paciente y funcionalidad, adaptadas a las necesidades de cada caso.</p>
-            </article>
-            <article class="service-card">
-              <h3>Rehabilitación sobre implantes</h3>
-              <p>Apoyo en restauraciones sobre implante con enfoque técnico, precisión en el proceso y seguimiento para lograr resultados predecibles.</p>
-            </article>
-            <article class="service-card">
-              <h3>Diseño y flujo digital CAD/CAM</h3>
-              <p>Integramos herramientas digitales para optimizar el diseño, mejorar la precisión y facilitar la comunicación en casos enviados por escaneo o archivos STL.</p>
-            </article>
-            <article class="service-card">
-              <h3>Acabados y estética dental</h3>
-              <p>Trabajos pensados para lograr una apariencia natural, buena integración visual y resultados que respalden la calidad clínica de tu tratamiento.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="proceso">
-        <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow">Proceso</p>
-            <h2>Un camino claro para una sonrisa confiable.</h2>
-          </div>
-          <div class="process-grid">
-            <article class="process-card">
-              <span class="process-step">01</span>
-              <h3>Valoración clínica</h3>
-              <p>Recibimos la remisión y especificaciones clínicas para planificar la restauración adecuada.</p>
-            </article>
-            <article class="process-card">
-              <span class="process-step">02</span>
-              <h3>Diseño</h3>
-              <p>Diseñamos cada restauración con CAD/CAM teniendo en cuenta guías y requisitos clínicos.</p>
-            </article>
-            <article class="process-card">
-              <span class="process-step">03</span>
-              <h3>Seguimiento clínico</h3>
-              <p>Coordinamos ajustes y ofrecemos soporte técnico durante la adaptación del paciente.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section-alt" id="como-trabajamos">
-        <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow">¿Cómo trabajamos con tu clínica?</p>
-            <h2>Un proceso confiable y transparente en cada etapa.</h2>
-          </div>
-          <div class="workflow-grid">
-            <article class="workflow-card">
-              <span class="workflow-step">1</span>
-              <h3>Recogemos tu caso</h3>
-              <p>Nos acercamos a tu clínica para recoger impresiones, modelos, registros o toda la información necesaria del trabajo. Si el caso es digital, también podemos recibir archivos STL e indicaciones clínicas, facilitando un proceso ágil y cómodo para tu equipo desde el inicio.</p>
-            </article>
-            <article class="workflow-card">
-              <span class="workflow-step">2</span>
-              <h3>Revisamos y confirmamos detalles</h3>
-              <p>Analizamos cada caso con atención, resolvemos cualquier duda y te compartimos tiempos estimados de entrega, observaciones técnicas y el seguimiento inicial. Así, tu clínica trabaja con mayor seguridad, claridad y confianza en cada decisión.</p>
-            </article>
-            <article class="workflow-card">
-              <span class="workflow-step">3</span>
-              <h3>Fabricamos y damos seguimiento</h3>
-              <p>Desarrollamos el trabajo en laboratorio con un enfoque preciso en ajuste, funcionalidad y estética, cuidando cada detalle para ofrecer resultados fiables y consistentes. Durante todo el proceso mantenemos una comunicación directa para que siempre tengas control y tranquilidad.</p>
-            </article>
-            <article class="workflow-card">
-              <span class="workflow-step">4</span>
-              <h3>Entregamos y damos soporte</h3>
-              <p>Llevamos el trabajo terminado a tu clínica y, si hace falta, acompañamos la entrega con ajustes, recomendaciones y atención posterior. De esta forma, tu equipo cuenta con un respaldo cercano que refuerza la confianza y asegura una mejor experiencia para ti y tus pacientes.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section-alt" id="por-que">
-        <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow">Ventajas</p>
-            <h2>¿Por qué elegirnos como tu laboratorio?</h2>
-          </div>
-          <div class="benefits-grid">
-            <div class="benefit-card">
-              <div class="benefit-icon">💎</div>
-              <h3>Materiales premium</h3>
-              <p>Utilizamos los mejores materiales para durabilidad y confort.</p>
-            </div>
-            <div class="benefit-card">
-              <div class="benefit-icon">🎯</div>
-              <h3>Alta precisión</h3>
-              <p>Diseño exacto adaptado a tus medidas y necesidades específicas.</p>
-            </div>
-            <div class="benefit-card">
-              <div class="benefit-icon">✨</div>
-              <h3>Excelente estética</h3>
-              <p>Prótesis que se ven naturales y te hacen sentir seguro.</p>
-            </div>
-            <div class="benefit-card">
-              <div class="benefit-icon">⚡</div>
-              <h3>Entregas puntuales</h3>
-              <p>Cumplimos con los tiempos acordados sin comprometer la calidad.</p>
-            </div>
-            <div class="benefit-card">
-              <div class="benefit-icon">👤</div>
-              <h3>Atención personalizada</h3>
-              <p>Equipo dedicado a tu caso desde el inicio hasta el seguimiento.</p>
-            </div>
-          </div>
-        </div>
-      </section>
+    .tema-esquina {
+      position: absolute;
+      pointer-events: none;
+      user-select: none;
+    }
 
 
-      <section class="section section-alt" id="testimonios">
-        <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow">Testimonios</p>
-            <h2>Clínicas y colegas que nos confían sus casos.</h2>
-          </div>
+    /* =====================================================
+       SEPTIEMBRE — INDEPENDENCIA DE MÉXICO
+       ===================================================== */
 
-          <p>
-            Si eres odontólogo o trabajas en un consultorio y quieres colaborar con nuestro laboratorio,
-            utiliza el formulario de envío de casos al final de la página o contacta a nuestro equipo técnico para obtener protocolos y condiciones.
-          </p>
-          <div class="testimonials-grid" id="testimonials-list"></div>
-          <form class="testimonial-form" id="testimonial-form">
-            <h3>Califica tu experiencia</h3>
-            <p class="testimonial-note">Déjanos tu comentario y ayuda a otros odontólogos a conocer nuestro servicio.</p>
-            <input type="text" id="testimonial-name" placeholder="Tu nombre" required />
-            <div class="rating-input" aria-label="Valoración de 1 a 5 estrellas">
-              <label class="rating-option"><input type="radio" name="rating" value="5" required /><span>★</span></label>
-              <label class="rating-option"><input type="radio" name="rating" value="4" /><span>★</span></label>
-              <label class="rating-option"><input type="radio" name="rating" value="3" /><span>★</span></label>
-              <label class="rating-option"><input type="radio" name="rating" value="2" /><span>★</span></label>
-              <label class="rating-option"><input type="radio" name="rating" value="1" /><span>★</span></label>
-            </div>
-            <textarea id="testimonial-message" rows="4" placeholder="Tu comentario sobre el servicio" required></textarea>
-            <button class="btn btn-primary" type="submit">Enviar comentario</button>
-          </form>
-        </div>
-      </section>
+    .tema-septiembre .tema-papel {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 40px;
+      opacity: 0.65;
 
-      <section class="section" id="confianza">
-        <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow">Confianza</p>
-            <h2>Resultados que inspiran seguridad y comodidad.</h2>
-          </div>
-          <div class="stats-grid">
-            <article class="stat-card">
-              <strong>+500</strong>
-              <span>Casos clínicos procesados</span>
-            </article>
-            <article class="stat-card">
-              <strong>Colaboración</strong>
-              <span>Con consultorios y especialistas</span>
-            </article>
-            <article class="stat-card">
-              <strong>CAD/CAM</strong>
-              <span>Tecnología digital</span>
-            </article>
-            <article class="stat-card">
-              <strong>Protocolos</strong>
-              <span>Flujo adaptado a tu práctica</span>
-            </article>
-          </div>
-        </div>
-      </section>
+      background:
+        linear-gradient(
+          135deg,
+          transparent 0 8px,
+          #006847 8px 28px,
+          transparent 28px 36px,
+          #ffffff 36px 56px,
+          transparent 56px 64px,
+          #ce1126 64px 84px,
+          transparent 84px 92px
+        );
 
-      <section class="section" id="contacto-form">
-        <div class="container">
-          <div class="contact-shell">
-            <div class="contact-copy">
-              <p class="eyebrow">Envío de casos clínicos</p>
-              <h2>Remite casos y recibe soporte técnico.</h2>
-              <p>Envíanos la remisión y archivos adjuntos; te respondemos con plan de trabajo, tiempos y presupuesto.</p>
-              <div class="contact-highlights">
-                <span>✓ Recepción de remisión</span>
-                <span>✓ Soporte técnico</span>
-                <span>✓ Entregas profesionales</span>
-              </div>
-            </div>
-            <form class="contact-form" id="contact-form" enctype="multipart/form-data">
-              <input type="text" id="clinic-name" placeholder="Nombre del consultorio / clínica" required />
-              <input type="text" id="dentist-name" placeholder="Nombre del odontólogo responsable" required />
-              <input type="email" id="dentist-email" placeholder="Email profesional" required />
-              <input type="tel" id="contact-phone" placeholder="Teléfono / WhatsApp" required />
-              <select id="contact-service" required>
-                <option value="">Selecciona un servicio</option>
-                <option>Prótesis dentales</option>
-                <option>Coronas</option>
-                <option>Implantes</option>
-                <option>Carillas</option>
-                <option>Diseño CAD/CAM</option>
-                <option>Guardas oclusales</option>
-              </select>
-              <textarea id="contact-message" rows="4" placeholder="Breve descripción clínica (diagnóstico, arco oclusal, materiales preferidos)" required></textarea>
-              <label class="file-label">Adjuntar archivos (STL, imágenes, PDF)
-                <input type="file" id="case-files" name="case-files" accept=".stl,.zip,.jpg,.png,.pdf" multiple />
-              </label>
-              <button type="submit" class="btn btn-primary">Enviar caso</button>
-            </form>
-          </div>
-        </div>
-      </section>
+      mask-image: linear-gradient(
+        to bottom,
+        #000 0%,
+        transparent 100%
+      );
+    }
+
+    .tema-septiembre .tema-esquina {
+      top: 20px;
+      right: 22px;
+      font-size: 25px;
+      opacity: 0.65;
+      filter: drop-shadow(
+        0 2px 4px rgba(0,0,0,.12)
+      );
+    }
 
 
-    <footer class="footer" id="contacto">
-      <div class="container footer-content">
-        <div class="footer-copy">
-          <h2>¿Quieres colaborar con nuestro laboratorio?</h2>
-          <p>Contacta a nuestro equipo técnico para protocolos, remisiones y preguntas sobre casos clínicos.</p>
-          <div class="contact-list">
-            <div class="contact-item">🏥 Atención a clínicas y consultorios</div>
-            <div class="contact-item">📱 +52 5518 547606</div>
-            <div class="contact-item">✉️ protesicatepepan@gmail.com</div>
-            <div class="contact-item">🌐 Soporte técnico y coordinación en línea</div>
-          </div>
-        </div>
-        <div class="contact-buttons">
-          <a class="btn btn-whatsapp" href="https://wa.me/525518547606?text=Hola,%20me%20gustaría%20agendar%20una%20valoración" target="_blank">
-            <span>💬</span> WhatsApp
-          </a>
-          <a class="btn btn-email" href="mailto:protesicatepepan@gmail.com">
-            <span>✉️</span> Email
-          </a>
-          <a class="btn btn-tiktok" href="https://www.tiktok.com/@protesica.tepepan?_r=1&_t=ZS-97ck6sVvz4q" target="_blank">
-            <span>🎵</span> TikTok
-          </a>
-        </div>
+    /* =====================================================
+       OCTUBRE — HALLOWEEN
+       ===================================================== */
+
+    .tema-octubre .tema-esquina {
+      top: 20px;
+      right: 22px;
+      font-size: 25px;
+      opacity: 0.55;
+      filter: drop-shadow(
+        0 2px 4px rgba(0,0,0,.12)
+      );
+    }
+
+    .tema-octubre .tema-esquina::before {
+      content: "✦";
+      position: absolute;
+      top: 30px;
+      right: 75px;
+      font-size: 17px;
+      opacity: .5;
+    }
+
+    .tema-octubre .tema-esquina::after {
+      content: "✦";
+      position: absolute;
+      top: 62px;
+      right: 20px;
+      font-size: 13px;
+      opacity: .4;
+    }
+
+
+    /* =====================================================
+       NOVIEMBRE — DÍA DE MUERTOS
+       ===================================================== */
+
+    .tema-noviembre .tema-papel {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 38px;
+      opacity: .5;
+
+      background:
+        repeating-linear-gradient(
+          90deg,
+          #e59f22 0 28px,
+          transparent 28px 38px,
+          #7b2cbf 38px 66px,
+          transparent 66px 76px,
+          #008c72 76px 104px,
+          transparent 104px 114px
+        );
+
+      mask-image: linear-gradient(
+        to bottom,
+        #000,
+        transparent
+      );
+    }
+
+    .tema-noviembre .tema-esquina {
+      top: 20px;
+      right: 22px;
+      font-size: 25px;
+      opacity: .6;
+    }
+
+
+    /* =====================================================
+       DICIEMBRE — NAVIDAD
+       ===================================================== */
+
+    .tema-diciembre .tema-luces {
+      position: absolute;
+      top: 8px;
+      left: 3%;
+      right: 3%;
+      height: 22px;
+
+      border-top: 1px solid rgba(
+        180,
+        140,
+        60,
+        .25
+      );
+    }
+
+    .tema-diciembre .tema-luces::before {
+      content:
+        "•   •   •   •   •   •   •   •   •   •   •   •";
+
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      top: -10px;
+
+      font-size: 20px;
+      letter-spacing: 18px;
+      opacity: .6;
+    }
+
+    .tema-diciembre .tema-esquina {
+      top: 20px;
+      right: 22px;
+      font-size: 25px;
+      opacity: .6;
+    }
+
+
+    /* =====================================================
+       ENERO — AÑO NUEVO
+       ===================================================== */
+
+    .tema-enero .tema-esquina {
+      top: 20px;
+      right: 22px;
+      font-size: 24px;
+      opacity: .55;
+    }
+
+
+    /* =====================================================
+       FEBRERO — SAN VALENTÍN
+       ===================================================== */
+
+    .tema-febrero .tema-esquina {
+      top: 20px;
+      right: 22px;
+      font-size: 24px;
+      opacity: .5;
+    }
+
+
+    /* =====================================================
+       PRIMAVERA
+       ===================================================== */
+
+    .tema-primavera .tema-esquina {
+      top: 20px;
+      right: 22px;
+      font-size: 24px;
+      opacity: .5;
+    }
+
+
+    /* =====================================================
+       VERANO
+       ===================================================== */
+
+    .tema-verano .tema-esquina {
+      top: 20px;
+      right: 22px;
+      font-size: 24px;
+      opacity: .45;
+    }
+
+
+    /* =====================================================
+       CELULAR
+       ===================================================== */
+
+    @media (max-width: 600px) {
+
+      .tema-septiembre .tema-papel,
+      .tema-noviembre .tema-papel {
+        height: 30px;
+      }
+
+      .tema-esquina {
+        transform: scale(.8);
+      }
+
+      .tema-diciembre .tema-luces {
+        left: 1%;
+        right: 1%;
+      }
+
+      .tema-diciembre .tema-luces::before {
+        letter-spacing: 8px;
+        font-size: 16px;
+      }
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- =====================================================
+       TEMÁTICA MENSUAL AUTOMÁTICA
+       ===================================================== -->
+
+  <div id="tema-mensual"></div>
+
+
+  <!-- =====================================================
+       HEADER
+       ===================================================== -->
+
+  <header class="hero">
+
+    <nav class="nav container" aria-label="Navegación principal">
+
+      <a class="brand" href="#inicio">
+
+        <img
+          src="assets/logo.png"
+          alt="Logotipo de Protesica Tepepan"
+        />
+
+        <span>Protesica Tepepan</span>
+
+      </a>
+
+
+      <button
+        class="nav-toggle"
+        id="nav-toggle"
+        aria-expanded="false"
+        aria-controls="primary-nav"
+        aria-label="Abrir menú"
+      >
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+      </button>
+
+
+      <div
+        class="nav-links"
+        id="primary-nav"
+      >
+
+        <a href="#nosotros">Nosotros</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#galeria">Galería</a>
+        <a href="#testimonios">Reseñas</a>
+        <a href="#contacto">Contacto</a>
+
       </div>
-    </footer>
 
-    <!-- Botón flotante WhatsApp -->
-    <a href="https://wa.me/525518547606?text=Hola,%20me%20gustaría%20agendar%20una%20valoración" 
-       target="_blank" 
-       class="whatsapp-float" 
-       aria-label="Contactar por WhatsApp">
-        <span class="whatsapp-icon" aria-hidden="true">
-          <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img">
-            <circle cx="12" cy="12" r="12" fill="#25D366" />
-            <path fill="#fff" d="M7.5 8.5h9a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-.75.75h-9a.75.75 0 0 1-.75-.75v-5.5a.75.75 0 0 1 .75-.75zm0-1.5a2.25 2.25 0 0 0-2.25 2.25v5.5A2.25 2.25 0 0 0 7.5 17h9a2.25 2.25 0 0 0 2.25-2.25v-5.5A2.25 2.25 0 0 0 16.5 7h-9z"/>
-            <path fill="#25D366" d="M16.5 9.75h-9v1.5h9v-1.5zm0 2.5h-9v1.5h9v-1.5zm0 2.5h-5v1.5h5v-1.5z"/>
-          </svg>
-        </span>
-    </a>
+    </nav>
 
-    <a href="#contacto-form" class="reserve-float" aria-label="Enviar caso clínico">
-      <span>📤</span>
-    </a>
 
-    <script src="script.js"></script>
-  </body>
+    <!-- =====================================================
+         HERO
+         ===================================================== -->
+
+    <section
+      class="hero-content container"
+      id="inicio"
+    >
+
+      <div
+        class="hero-card lab-panel"
+        aria-label="Laboratorio dental para clínicas y odontólogos"
+      >
+
+        <div class="lab-panel__top">
+
+          <p class="eyebrow eyebrow--small">
+            Laboratorio dental
+          </p>
+
+          <h2>
+            Laboratorio dental para clínicas y odontólogos
+          </h2>
+
+          <p class="lab-panel__subtitle">
+
+            Recogemos, fabricamos y entregamos restauraciones
+            para clínicas y odontólogos con precisión,
+            tiempos confiables y acompañamiento técnico
+            en cada caso clínico.
+
+          </p>
+
+        </div>
+
+
+        <div class="lab-options">
+
+          <article class="lab-option is-active">
+
+            <div class="lab-option__icon">
+              🦷
+            </div>
+
+            <div class="lab-option__content">
+
+              <h3>
+                Prótesis de alta precisión
+              </h3>
+
+              <p>
+                Diseño y fabricación de restauraciones
+                con enfoque en ajuste, estética y
+                funcionalidad clínica.
+              </p>
+
+            </div>
+
+            <span class="lab-option__check">
+              ✓
+            </span>
+
+          </article>
+
+
+          <article class="lab-option">
+
+            <div class="lab-option__icon">
+              💬
+            </div>
+
+            <div class="lab-option__content">
+
+              <h3>
+                Comunicación directa con el laboratorio
+              </h3>
+
+              <p>
+                Seguimiento cercano de cada caso,
+                resolución de dudas y coordinación clara
+                durante todo el proceso.
+              </p>
+
+            </div>
+
+            <span class="lab-option__check">
+              ↗
+            </span>
+
+          </article>
+
+
+          <article class="lab-option">
+
+            <div class="lab-option__icon">
+              🛠️
+            </div>
+
+            <div class="lab-option__content">
+
+              <h3>
+                Soporte técnico para cada caso
+              </h3>
+
+              <p>
+                Acompañamiento en planificación,
+                materiales y detalles de fabricación
+                para lograr mejores resultados clínicos.
+              </p>
+
+            </div>
+
+            <span class="lab-option__check">
+              ●
+            </span>
+
+          </article>
+
+        </div>
+
+
+        <a
+          class="btn btn-primary lab-panel__cta"
+          href="#contacto-form"
+        >
+          Enviar caso clínico
+        </a>
+
+      </div>
+
+
+      <div>
+
+        <p class="eyebrow">
+          Laboratorio dental
+        </p>
+
+        <h1>
+          Soluciones de laboratorio para odontólogos y clínicas
+        </h1>
+
+        <p class="hero-copy">
+
+          Recogemos, fabricamos y entregamos restauraciones
+          con precisión, tiempos confiables y acompañamiento
+          técnico en cada caso clínico.
+
+        </p>
+
+
+        <ul class="hero-benefits">
+
+          <li>
+            Restauraciones con alta precisión y excelente acabado
+          </li>
+
+          <li>
+            Atención directa y seguimiento por WhatsApp
+          </li>
+
+          <li>
+            Flujo digital y soporte técnico para cada caso
+          </li>
+
+        </ul>
+
+
+        <div class="hero-actions">
+
+          <a
+            class="btn btn-primary"
+            href="#contacto-form"
+          >
+            Enviar caso por WhatsApp
+          </a>
+
+          <a
+            class="btn btn-secondary"
+            href="#servicios"
+          >
+            Ver servicios
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         GALERÍA
+         ===================================================== -->
+
+    <section
+      id="galeria"
+      class="galeria-section"
+    >
+
+      <div class="galeria-container">
+
+        <div class="galeria-header">
+
+          <span class="galeria-etiqueta">
+            NUESTROS TRABAJOS
+          </span>
+
+          <h2>
+            Galería clínica
+          </h2>
+
+          <p>
+            Conoce una selección de nuestros trabajos realizados
+            con precisión, estética y tecnología digital.
+          </p>
+
+        </div>
+
+
+        <div class="galeria-slider">
+
+
+          <div class="galeria-item">
+            <img
+              src="Galeria%20Tepepan/trabajo1.jfif"
+              alt="Trabajo dental 1"
+              loading="lazy"
+            />
+          </div>
+
+
+          <div class="galeria-item">
+            <img
+              src="Galeria%20Tepepan/trabajo2.jfif"
+              alt="Trabajo dental 2"
+              loading="lazy"
+            />
+          </div>
+
+
+          <div class="galeria-item">
+            <img
+              src="Galeria%20Tepepan/trabajo3.jfif"
+              alt="Trabajo dental 3"
+              loading="lazy"
+            />
+          </div>
+
+
+          <div class="galeria-item">
+            <img
+              src="Galeria%20Tepepan/trabajo5.jfif"
+              alt="Trabajo dental 5"
+              loading="lazy"
+            />
+          </div>
+
+
+          <div class="galeria-item">
+            <img
+              src="Galeria%20Tepepan/trabajo6.jfif"
+              alt="Trabajo dental 6"
+              loading="lazy"
+            />
+          </div>
+
+
+          <div class="galeria-item">
+            <img
+              src="Galeria%20Tepepan/trabajo7.jfif"
+              alt="Trabajo dental 7"
+              loading="lazy"
+            />
+          </div>
+
+
+          <div class="galeria-item">
+            <img
+              src="Galeria%20Tepepan/trabajo8.jfif"
+              alt="Trabajo dental 8"
+              loading="lazy"
+            />
+          </div>
+
+
+          <div class="galeria-item">
+            <img
+              src="Galeria%20Tepepan/trabajo9.jfif"
+              alt="Trabajo dental 9"
+              loading="lazy"
+            />
+          </div>
+
+
+          <div class="galeria-item">
+            <img
+              src="Galeria%20Tepepan/trabajo10.jfif"
+              alt="Trabajo dental 10"
+              loading="lazy"
+            />
+          </div>
+
+
+          <div class="galeria-item">
+            <img
+              src="Galeria%20Tepepan/trabajo11.jfif"
+              alt="Trabajo dental 11"
+              loading="lazy"
+            />
+          </div>
+
+
+          <div class="galeria-item">
+            <img
+              src="Galeria%20Tepepan/trabajo12.jfif"
+              alt="Trabajo dental 12"
+              loading="lazy"
+            />
+          </div>
+
+
+          <div class="galeria-item">
+            <img
+              src="Galeria%20Tepepan/trabajo13.jfif"
+              alt="Trabajo dental 13"
+              loading="lazy"
+            />
+          </div>
+
+
+          <div class="galeria-item">
+            <img
+              src="Galeria%20Tepepan/trabajo14.jfif"
+              alt="Trabajo dental 14"
+              loading="lazy"
+            />
+          </div>
+
+
+          <div class="galeria-item">
+            <img
+              src="Galeria%20Tepepan/trabajo15.jfif"
+              alt="Trabajo dental 15"
+              loading="lazy"
+            />
+          </div>
+
+
+          <div class="galeria-item">
+            <img
+              src="Galeria%20Tepepan/trabajo16.jfif"
+              alt="Trabajo dental 16"
+              loading="lazy"
+            />
+          </div>
+
+
+          <div class="galeria-item">
+            <img
+              src="Galeria%20Tepepan/trabajo17.jfif"
+              alt="Trabajo dental 17"
+              loading="lazy"
+            />
+          </div>
+
+
+          <div class="galeria-item">
+            <img
+              src="Galeria%20Tepepan/trabajo18.jfif"
+              alt="Trabajo dental 18"
+              loading="lazy"
+            />
+          </div>
+
+
+        </div>
+
+
+        <div class="galeria-drive">
+
+          <p>
+            ¿Quieres conocer más de nuestro trabajo?
+          </p>
+
+          <a
+            href="https://drive.google.com/drive/folders/1Lih1ISUAmoxvOKKQoEO64DxQlghLXvYN"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-drive"
+          >
+            📁 Ver galería completa en Google Drive
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </header>
+
+
+  <!-- =====================================================
+       CONTENIDO PRINCIPAL
+       ===================================================== -->
+
+  <main>
+
+
+    <!-- NOSOTROS -->
+
+    <section
+      class="section container"
+      id="nosotros"
+    >
+
+      <div class="section-heading">
+
+        <p class="eyebrow">
+          Sobre nosotros
+        </p>
+
+        <h2>
+          Innovación, precisión y respaldo para tu práctica dental
+        </h2>
+
+      </div>
+
+
+      <div class="split-grid">
+
+        <p>
+          En Protésica Innovación colaboramos con odontólogos,
+          especialistas y clínicas dentales que buscan un
+          laboratorio confiable para sus restauraciones.
+          Nuestro enfoque combina técnica, estética y
+          comunicación directa, para ofrecer soluciones que
+          se adapten a las necesidades de cada caso clínico.
+        </p>
+
+        <p>
+          Trabajamos con un compromiso claro: calidad en cada
+          pieza, seguimiento puntual y apoyo técnico durante
+          el proceso, para que tu práctica cuente con un
+          laboratorio que entienda la importancia de cada detalle.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- SERVICIOS -->
+
+    <section
+      class="section section-alt"
+      id="servicios"
+    >
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <p class="eyebrow">
+            Servicios
+          </p>
+
+          <h2>
+            Servicios de laboratorio dental
+          </h2>
+
+        </div>
+
+
+        <p class="section-copy">
+
+          Ofrecemos soluciones protésicas y restaurativas
+          para clínicas y odontólogos que buscan precisión,
+          estética y un flujo de trabajo más confiable.
+
+        </p>
+
+
+        <div class="services-grid">
+
+
+          <article class="service-card">
+
+            <h3>
+              Coronas de zirconia
+            </h3>
+
+            <p>
+              Restauraciones con excelente resistencia,
+              ajuste preciso y una estética natural para
+              casos que requieren durabilidad y alta calidad
+              en terminación.
+            </p>
+
+          </article>
+
+
+          <article class="service-card">
+
+            <h3>
+              Prótesis fijas
+            </h3>
+
+            <p>
+              Soluciones diseñadas para devolver función,
+              estabilidad y armonía oclusal, cuidando la
+              adaptación clínica y el resultado final del tratamiento.
+            </p>
+
+          </article>
+
+
+          <article class="service-card">
+
+            <h3>
+              Prótesis removibles
+            </h3>
+
+            <p>
+              Opciones protésicas elaboradas con atención
+              al detalle, comodidad del paciente y funcionalidad,
+              adaptadas a las necesidades de cada caso.
+            </p>
+
+          </article>
+
+
+          <article class="service-card">
+
+            <h3>
+              Rehabilitación sobre implantes
+            </h3>
+
+            <p>
+              Apoyo en restauraciones sobre implante con
+              enfoque técnico, precisión en el proceso y
+              seguimiento para lograr resultados predecibles.
+            </p>
+
+          </article>
+
+
+          <article class="service-card">
+
+            <h3>
+              Diseño y flujo digital CAD/CAM
+            </h3>
+
+            <p>
+              Integramos herramientas digitales para optimizar
+              el diseño, mejorar la precisión y facilitar la
+              comunicación en casos enviados por escaneo o
+              archivos STL.
+            </p>
+
+          </article>
+
+
+          <article class="service-card">
+
+            <h3>
+              Acabados y estética dental
+            </h3>
+
+            <p>
+              Trabajos pensados para lograr una apariencia
+              natural, buena integración visual y resultados
+              que respalden la calidad clínica de tu tratamiento.
+            </p>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- PROCESO -->
+
+    <section
+      class="section"
+      id="proceso"
+    >
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <p class="eyebrow">
+            Proceso
+          </p>
+
+          <h2>
+            Un camino claro para una sonrisa confiable.
+          </h2>
+
+        </div>
+
+
+        <div class="process-grid">
+
+
+          <article class="process-card">
+
+            <span class="process-step">
+              01
+            </span>
+
+            <h3>
+              Valoración clínica
+            </h3>
+
+            <p>
+              Recibimos la remisión y especificaciones clínicas
+              para planificar la restauración adecuada.
+            </p>
+
+          </article>
+
+
+          <article class="process-card">
+
+            <span class="process-step">
+              02
+            </span>
+
+            <h3>
+              Diseño
+            </h3>
+
+            <p>
+              Diseñamos cada restauración con CAD/CAM teniendo
+              en cuenta guías y requisitos clínicos.
+            </p>
+
+          </article>
+
+
+          <article class="process-card">
+
+            <span class="process-step">
+              03
+            </span>
+
+            <h3>
+              Seguimiento clínico
+            </h3>
+
+            <p>
+              Coordinamos ajustes y ofrecemos soporte técnico
+              durante la adaptación del paciente.
+            </p>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- COMO TRABAJAMOS -->
+
+    <section
+      class="section section-alt"
+      id="como-trabajamos"
+    >
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <p class="eyebrow">
+            ¿Cómo trabajamos con tu clínica?
+          </p>
+
+          <h2>
+            Un proceso confiable y transparente en cada etapa.
+          </h2>
+
+        </div>
+
+
+        <div class="workflow-grid">
+
+
+          <article class="workflow-card">
+
+            <span class="workflow-step">
+              1
+            </span>
+
+            <h3>
+              Recogemos tu caso
+            </h3>
+
+            <p>
+              Nos acercamos a tu clínica para recoger impresiones,
+              modelos, registros o toda la información necesaria
+              del trabajo. Si el caso es digital, también podemos
+              recibir archivos STL e indicaciones clínicas,
+              facilitando un proceso ágil y cómodo para tu equipo
+              desde el inicio.
+            </p>
+
+          </article>
+
+
+          <article class="workflow-card">
+
+            <span class="workflow-step">
+              2
+            </span>
+
+            <h3>
+              Revisamos y confirmamos detalles
+            </h3>
+
+            <p>
+              Analizamos cada caso con atención, resolvemos
+              cualquier duda y te compartimos tiempos estimados
+              de entrega, observaciones técnicas y el seguimiento
+              inicial. Así, tu clínica trabaja con mayor seguridad,
+              claridad y confianza en cada decisión.
+            </p>
+
+          </article>
+
+
+          <article class="workflow-card">
+
+            <span class="workflow-step">
+              3
+            </span>
+
+            <h3>
+              Fabricamos y damos seguimiento
+            </h3>
+
+            <p>
+              Desarrollamos el trabajo en laboratorio con un
+              enfoque preciso en ajuste, funcionalidad y estética,
+              cuidando cada detalle para ofrecer resultados fiables
+              y consistentes. Durante todo el proceso mantenemos
+              una comunicación directa para que siempre tengas
+              control y tranquilidad.
+            </p>
+
+          </article>
+
+
+          <article class="workflow-card">
+
+            <span class="workflow-step">
+              4
+            </span>
+
+            <h3>
+              Entregamos y damos soporte
+            </h3>
+
+            <p>
+              Llevamos el trabajo terminado a tu clínica y,
+              si hace falta, acompañamos la entrega con ajustes,
+              recomendaciones y atención posterior. De esta forma,
+              tu equipo cuenta con un respaldo cercano que refuerza
+              la confianza y asegura una mejor experiencia para ti
+              y tus pacientes.
+            </p>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- VENTAJAS -->
+
+    <section
+      class="section section-alt"
+      id="por-que"
+    >
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <p class="eyebrow">
+            Ventajas
+          </p>
+
+          <h2>
+            ¿Por qué elegirnos como tu laboratorio?
+          </h2>
+
+        </div>
+
+
+        <div class="benefits-grid">
+
+
+          <div class="benefit-card">
+
+            <div class="benefit-icon">
+              💎
+            </div>
+
+            <h3>
+              Materiales premium
+            </h3>
+
+            <p>
+              Utilizamos los mejores materiales para
+              durabilidad y confort.
+            </p>
+
+          </div>
+
+
+          <div class="benefit-card">
+
+            <div class="benefit-icon">
+              🎯
+            </div>
+
+            <h3>
+              Alta precisión
+            </h3>
+
+            <p>
+              Diseño exacto adaptado a tus medidas y
+              necesidades específicas.
+            </p>
+
+          </div>
+
+
+          <div class="benefit-card">
+
+            <div class="benefit-icon">
+              ✨
+            </div>
+
+            <h3>
+              Excelente estética
+            </h3>
+
+            <p>
+              Prótesis que se ven naturales y te hacen
+              sentir seguro.
+            </p>
+
+          </div>
+
+
+          <div class="benefit-card">
+
+            <div class="benefit-icon">
+              ⚡
+            </div>
+
+            <h3>
+              Entregas puntuales
+            </h3>
+
+            <p>
+              Cumplimos con los tiempos acordados sin
+              comprometer la calidad.
+            </p>
+
+          </div>
+
+
+          <div class="benefit-card">
+
+            <div class="benefit-icon">
+              👤
+            </div>
+
+            <h3>
+              Atención personalizada
+            </h3>
+
+            <p>
+              Equipo dedicado a tu caso desde el inicio
+              hasta el seguimiento.
+            </p>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- TESTIMONIOS -->
+
+    <section
+      class="section section-alt"
+      id="testimonios"
+    >
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <p class="eyebrow">
+            Testimonios
+          </p>
+
+          <h2>
+            Clínicas y colegas que nos confían sus casos.
+          </h2>
+
+        </div>
+
+
+        <p>
+
+          Si eres odontólogo o trabajas en un consultorio
+          y quieres colaborar con nuestro laboratorio,
+          utiliza el formulario de envío de casos al final
+          de la página o contacta a nuestro equipo técnico
+          para obtener protocolos y condiciones.
+
+        </p>
+
+
+        <div
+          class="testimonials-grid"
+          id="testimonials-list"
+        ></div>
+
+
+        <form
+          class="testimonial-form"
+          id="testimonial-form"
+        >
+
+          <h3>
+            Califica tu experiencia
+          </h3>
+
+          <p class="testimonial-note">
+            Déjanos tu comentario y ayuda a otros odontólogos
+            a conocer nuestro servicio.
+          </p>
+
+
+          <input
+            type="text"
+            id="testimonial-name"
+            placeholder="Tu nombre"
+            required
+          />
+
+
+          <div
+            class="rating-input"
+            aria-label="Valoración de 1 a 5 estrellas"
+          >
+
+            <label class="rating-option">
+              <input
+                type="radio"
+                name="rating"
+                value="5"
+                required
+              />
+              <span>★</span>
+            </label>
+
+            <label class="rating-option">
+              <input
+                type="radio"
+                name="rating"
+                value="4"
+              />
+              <span>★</span>
+            </label>
+
+            <label class="rating-option">
+              <input
+                type="radio"
+                name="rating"
+                value="3"
+              />
+              <span>★</span>
+            </label>
+
+            <label class="rating-option">
+              <input
+                type="radio"
+                name="rating"
+                value="2"
+              />
+              <span>★</span>
+            </label>
+
+            <label class="rating-option">
+              <input
+                type="radio"
+                name="rating"
+                value="1"
+              />
+              <span>★</span>
+            </label>
+
+          </div>
+
+
+          <textarea
+            id="testimonial-message"
+            rows="4"
+            placeholder="Tu comentario sobre el servicio"
+            required
+          ></textarea>
+
+
+          <button
+            class="btn btn-primary"
+            type="submit"
+          >
+            Enviar comentario
+          </button>
+
+        </form>
+
+      </div>
+
+    </section>
+
+
+    <!-- CONFIANZA -->
+
+    <section
+      class="section"
+      id="confianza"
+    >
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <p class="eyebrow">
+            Confianza
+          </p>
+
+          <h2>
+            Resultados que inspiran seguridad y comodidad.
+          </h2>
+
+        </div>
+
+
+        <div class="stats-grid">
+
+
+          <article class="stat-card">
+
+            <strong>
+              +500
+            </strong>
+
+            <span>
+              Casos clínicos procesados
+            </span>
+
+          </article>
+
+
+          <article class="stat-card">
+
+            <strong>
+              Colaboración
+            </strong>
+
+            <span>
+              Con consultorios y especialistas
+            </span>
+
+          </article>
+
+
+          <article class="stat-card">
+
+            <strong>
+              CAD/CAM
+            </strong>
+
+            <span>
+              Tecnología digital
+            </span>
+
+          </article>
+
+
+          <article class="stat-card">
+
+            <strong>
+              Protocolos
+            </strong>
+
+            <span>
+              Flujo adaptado a tu práctica
+            </span>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CONTACTO -->
+
+    <section
+      class="section"
+      id="contacto-form"
+    >
+
+      <div class="container">
+
+        <div class="contact-shell">
+
+
+          <div class="contact-copy">
+
+            <p class="eyebrow">
+              Envío de casos clínicos
+            </p>
+
+            <h2>
+              Remite casos y recibe soporte técnico.
+            </h2>
+
+            <p>
+              Envíanos la remisión y archivos adjuntos;
+              te respondemos con plan de trabajo,
+              tiempos y presupuesto.
+            </p>
+
+
+            <div class="contact-highlights">
+
+              <span>
+                ✓ Recepción de remisión
+              </span>
+
+              <span>
+                ✓ Soporte técnico
+              </span>
+
+              <span>
+                ✓ Entregas profesionales
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <form
+            class="contact-form"
+            id="contact-form"
+            enctype="multipart/form-data"
+          >
+
+            <input
+              type="text"
+              id="clinic-name"
+              placeholder="Nombre del consultorio / clínica"
+              required
+            />
+
+
+            <input
+              type="text"
+              id="dentist-name"
+              placeholder="Nombre del odontólogo responsable"
+              required
+            />
+
+
+            <input
+              type="email"
+              id="dentist-email"
+              placeholder="Email profesional"
+              required
+            />
+
+
+            <input
+              type="tel"
+              id="contact-phone"
+              placeholder="Teléfono / WhatsApp"
+              required
+            />
+
+
+            <select
+              id="contact-service"
+              required
+            >
+
+              <option value="">
+                Selecciona un servicio
+              </option>
+
+              <option>
+                Prótesis dentales
+              </option>
+
+              <option>
+                Coronas
+              </option>
+
+              <option>
+                Implantes
+              </option>
+
+              <option>
+                Carillas
+              </option>
+
+              <option>
+                Diseño CAD/CAM
+              </option>
+
+              <option>
+                Guardas oclusales
+              </option>
+
+            </select>
+
+
+            <textarea
+              id="contact-message"
+              rows="4"
+              placeholder="Breve descripción clínica (diagnóstico, arco oclusal, materiales preferidos)"
+              required
+            ></textarea>
+
+
+            <label class="file-label">
+
+              Adjuntar archivos (STL, imágenes, PDF)
+
+              <input
+                type="file"
+                id="case-files"
+                name="case-files"
+                accept=".stl,.zip,.jpg,.png,.pdf"
+                multiple
+              />
+
+            </label>
+
+
+            <button
+              type="submit"
+              class="btn btn-primary"
+            >
+              Enviar caso
+            </button>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
+
+  <footer
+    class="footer"
+    id="contacto"
+  >
+
+    <div class="container footer-content">
+
+
+      <div class="footer-copy">
+
+        <h2>
+          ¿Quieres colaborar con nuestro laboratorio?
+        </h2>
+
+        <p>
+          Contacta a nuestro equipo técnico para protocolos,
+          remisiones y preguntas sobre casos clínicos.
+        </p>
+
+
+        <div class="contact-list">
+
+          <div class="contact-item">
+            🏥 Atención a clínicas y consultorios
+          </div>
+
+          <div class="contact-item">
+            📱 +52 5518 547606
+          </div>
+
+          <div class="contact-item">
+            ✉️ protesicatepepan@gmail.com
+          </div>
+
+          <div class="contact-item">
+            🌐 Soporte técnico y coordinación en línea
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="contact-buttons">
+
+
+        <a
+          class="btn btn-whatsapp"
+          href="https://wa.me/525518547606?text=Hola,%20me%20gustaría%20agendar%20una%20valoración"
+          target="_blank"
+        >
+
+          <span>
+            💬
+          </span>
+
+          WhatsApp
+
+        </a>
+
+
+        <a
+          class="btn btn-email"
+          href="mailto:protesicatepepan@gmail.com"
+        >
+
+          <span>
+            ✉️
+          </span>
+
+          Email
+
+        </a>
+
+
+        <a
+          class="btn btn-tiktok"
+          href="https://www.tiktok.com/@protesica.tepepan?_r=1&_t=ZS-97ck6sVvz4q"
+          target="_blank"
+        >
+
+          <span>
+            🎵
+          </span>
+
+          TikTok
+
+        </a>
+
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =====================================================
+       BOTÓN FLOTANTE WHATSAPP
+       ===================================================== -->
+
+  <a
+    href="https://wa.me/525518547606?text=Hola,%20me%20gustaría%20agendar%20una%20valoración"
+    target="_blank"
+    class="whatsapp-float"
+    aria-label="Contactar por WhatsApp"
+  >
+
+    <span
+      class="whatsapp-icon"
+      aria-hidden="true"
+    >
+
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+        role="img"
+      >
+
+        <circle
+          cx="12"
+          cy="12"
+          r="12"
+          fill="#25D366"
+        />
+
+        <path
+          fill="#fff"
+          d="M7.5 8.5h9a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-.75.75h-9a.75.75 0 0 1-.75-.75v-5.5a.75.75 0 0 1 .75-.75zm0-1.5a2.25 2.25 0 0 0-2.25 2.25v5.5A2.25 2.25 0 0 0 7.5 17h9a2.25 2.25 0 0 0 2.25-2.25v-5.5A2.25 2.25 0 0 0 16.5 7h-9z"
+        />
+
+        <path
+          fill="#25D366"
+          d="M16.5 9.75h-9v1.5h9v-1.5zm0 2.5h-9v1.5h9v-1.5zm0 2.5h-5v1.5h5v-1.5z"
+        />
+
+      </svg>
+
+    </span>
+
+  </a>
+
+
+  <!-- =====================================================
+       BOTÓN FLOTANTE ENVIAR CASO
+       ===================================================== -->
+
+  <a
+    href="#contacto-form"
+    class="reserve-float"
+    aria-label="Enviar caso clínico"
+  >
+
+    <span>
+      📤
+    </span>
+
+  </a>
+
+
+  <!-- =====================================================
+       TEMÁTICA AUTOMÁTICA SEGÚN EL MES
+       ===================================================== -->
+
+  <script>
+
+    (function () {
+
+      const mes = new Date().getMonth();
+
+      /*
+        0  = Enero
+        1  = Febrero
+        2  = Marzo
+        3  = Abril
+        4  = Mayo
+        5  = Junio
+        6  = Julio
+        7  = Agosto
+        8  = Septiembre
+        9  = Octubre
+        10 = Noviembre
+        11 = Diciembre
+      */
+
+
+      const temas = {
+
+        0: "tema-enero",
+
+        1: "tema-febrero",
+
+        2: "tema-primavera",
+
+        3: "tema-primavera",
+
+        4: "tema-primavera",
+
+        5: "tema-verano",
+
+        6: "tema-verano",
+
+        7: "tema-verano",
+
+        8: "tema-septiembre",
+
+        9: "tema-octubre",
+
+        10: "tema-noviembre",
+
+        11: "tema-diciembre"
+
+      };
+
+
+      const nombres = {
+
+        0: "enero",
+
+        1: "febrero",
+
+        2: "marzo",
+
+        3: "abril",
+
+        4: "mayo",
+
+        5: "junio",
+
+        6: "julio",
+
+        7: "agosto",
+
+        8: "septiembre",
+
+        9: "octubre",
+
+        10: "noviembre",
+
+        11: "diciembre"
+
+      };
+
+
+      const capa =
+        document.getElementById(
+          "tema-mensual"
+        );
+
+
+      const temaActual =
+        temas[mes];
+
+
+      capa.className =
+        temaActual;
+
+
+      capa.dataset.mes =
+        nombres[mes];
+
+
+      /* =================================================
+         SEPTIEMBRE
+         ================================================= */
+
+      if (mes === 8) {
+
+        const papel =
+          document.createElement("div");
+
+        papel.className =
+          "tema-papel";
+
+
+        const esquina =
+          document.createElement("div");
+
+        esquina.className =
+          "tema-esquina";
+
+        esquina.textContent =
+          "🇲🇽";
+
+
+        capa.appendChild(papel);
+
+        capa.appendChild(esquina);
+
+      }
+
+
+      /* =================================================
+         OCTUBRE
+         ================================================= */
+
+      if (mes === 9) {
+
+        const esquina =
+          document.createElement("div");
+
+        esquina.className =
+          "tema-esquina";
+
+        esquina.textContent =
+          "🎃";
+
+
+        capa.appendChild(esquina);
+
+      }
+
+
+      /* =================================================
+         NOVIEMBRE
+         ================================================= */
+
+      if (mes === 10) {
+
+        const papel =
+          document.createElement("div");
+
+        papel.className =
+          "tema-papel";
+
+
+        const esquina =
+          document.createElement("div");
+
+        esquina.className =
+          "tema-esquina";
+
+        esquina.textContent =
+          "🌼";
+
+
+        capa.appendChild(papel);
+
+        capa.appendChild(esquina);
+
+      }
+
+
+      /* =================================================
+         DICIEMBRE
+         ================================================= */
+
+      if (mes === 11) {
+
+        const luces =
+          document.createElement("div");
+
+        luces.className =
+          "tema-luces";
+
+
+        const esquina =
+          document.createElement("div");
+
+        esquina.className =
+          "tema-esquina";
+
+        esquina.textContent =
+          "✨";
+
+
+        capa.appendChild(luces);
+
+        capa.appendChild(esquina);
+
+      }
+
+
+      /* =================================================
+         ENERO
+         ================================================= */
+
+      if (mes === 0) {
+
+        const esquina =
+          document.createElement("div");
+
+        esquina.className =
+          "tema-esquina";
+
+        esquina.textContent =
+          "✨";
+
+
+        capa.appendChild(esquina);
+
+      }
+
+
+      /* =================================================
+         FEBRERO
+         ================================================= */
+
+      if (mes === 1) {
+
+        const esquina =
+          document.createElement("div");
+
+        esquina.className =
+          "tema-esquina";
+
+        esquina.textContent =
+          "♡";
+
+
+        capa.appendChild(esquina);
+
+      }
+
+
+      /* =================================================
+         MARZO — MAYO
+         ================================================= */
+
+      if (
+        mes >= 2 &&
+        mes <= 4
+      ) {
+
+        const esquina =
+          document.createElement("div");
+
+        esquina.className =
+          "tema-esquina";
+
+        esquina.textContent =
+          "✿";
+
+
+        capa.appendChild(esquina);
+
+      }
+
+
+      /* =================================================
+         JUNIO — AGOSTO
+         ================================================= */
+
+      if (
+        mes >= 5 &&
+        mes <= 7
+      ) {
+
+        const esquina =
+          document.createElement("div");
+
+        esquina.className =
+          "tema-esquina";
+
+        esquina.textContent =
+          "☀";
+
+
+        capa.appendChild(esquina);
+
+      }
+
+    })();
+
+  </script>
+
+
+  <!-- =====================================================
+       JAVASCRIPT ORIGINAL DE LA PÁGINA
+       ===================================================== -->
+
+  <script src="script.js"></script>
+
+</body>
 </html>
