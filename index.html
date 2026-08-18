@@ -2122,7 +2122,843 @@
 
 
         capa.appendChild(esquina);
+<!-- =========================================================
+     TEMÁTICAS PROFESIONALES AUTOMÁTICAS
+     PROTESICA TEPEPAN
+     
+     NO MODIFICA:
+     - Galería
+     - Fotos
+     - Textos
+     - Menú
+     - Botones
+     - Estructura
+     ========================================================= -->
 
+<style>
+
+  /* =====================================================
+     CAPA DE TEMÁTICA
+     ===================================================== */
+
+  #tema-mensual {
+    position: fixed !important;
+    inset: 0 !important;
+    width: 100%;
+    height: 100%;
+    pointer-events: none !important;
+    z-index: 9998 !important;
+    overflow: hidden !important;
+  }
+
+  #tema-mensual * {
+    pointer-events: none !important;
+  }
+
+
+  /* =====================================================
+     DETALLE SUPERIOR
+     ===================================================== */
+
+  .tema-borde-superior {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    opacity: .9;
+  }
+
+
+  /* =====================================================
+     SEPTIEMBRE — INDEPENDENCIA DE MÉXICO
+     ===================================================== */
+
+  .tema-septiembre .tema-borde-superior {
+    background: linear-gradient(
+      90deg,
+      #006847 0%,
+      #006847 33%,
+      #f7f7f7 33%,
+      #f7f7f7 66%,
+      #ce1126 66%,
+      #ce1126 100%
+    );
+  }
+
+  .tema-septiembre .tema-papel-picado {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 100%;
+    height: 48px;
+    opacity: .72;
+
+    background:
+      linear-gradient(
+        135deg,
+        transparent 0 8px,
+        #006847 8px 38px,
+        transparent 38px 48px,
+        #ffffff 48px 78px,
+        transparent 78px 88px,
+        #ce1126 88px 118px,
+        transparent 118px 128px
+      );
+
+    mask-image:
+      linear-gradient(
+        to bottom,
+        black 0%,
+        black 45%,
+        transparent 100%
+      );
+  }
+
+  .tema-septiembre .tema-medallon {
+    position: absolute;
+    top: 22px;
+    right: 24px;
+
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,.9);
+
+    box-shadow:
+      0 5px 18px rgba(0,0,0,.15);
+
+    font-size: 22px;
+
+    opacity: .9;
+  }
+
+  .tema-septiembre .tema-adornos {
+    position: absolute;
+    bottom: 35px;
+    left: 22px;
+
+    display: flex;
+    gap: 8px;
+
+    opacity: .45;
+    font-size: 16px;
+  }
+
+
+  /* =====================================================
+     OCTUBRE — HALLOWEEN
+     ===================================================== */
+
+  .tema-octubre .tema-borde-superior {
+    background: linear-gradient(
+      90deg,
+      #151515,
+      #d66a00,
+      #151515
+    );
+  }
+
+  .tema-octubre .tema-medallon {
+    position: absolute;
+    top: 22px;
+    right: 24px;
+
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(20,20,20,.88);
+
+    box-shadow:
+      0 5px 18px rgba(0,0,0,.2);
+
+    font-size: 21px;
+
+    opacity: .85;
+  }
+
+  .tema-octubre .tema-adornos {
+    position: absolute;
+    top: 80px;
+    right: 75px;
+
+    font-size: 14px;
+    letter-spacing: 12px;
+
+    opacity: .45;
+  }
+
+
+  /* =====================================================
+     NOVIEMBRE — DÍA DE MUERTOS
+     ===================================================== */
+
+  .tema-noviembre .tema-borde-superior {
+    background: linear-gradient(
+      90deg,
+      #e58f00,
+      #7b2cbf,
+      #008c72,
+      #e58f00
+    );
+  }
+
+  .tema-noviembre .tema-papel-picado {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 100%;
+    height: 44px;
+
+    opacity: .55;
+
+    background:
+      repeating-linear-gradient(
+        90deg,
+        #e59f22 0 30px,
+        transparent 30px 40px,
+        #7b2cbf 40px 70px,
+        transparent 70px 80px,
+        #008c72 80px 110px,
+        transparent 110px 120px
+      );
+
+    mask-image:
+      linear-gradient(
+        to bottom,
+        black,
+        transparent
+      );
+  }
+
+  .tema-noviembre .tema-medallon {
+    position: absolute;
+    top: 22px;
+    right: 24px;
+
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,.9);
+
+    box-shadow:
+      0 5px 18px rgba(0,0,0,.14);
+
+    font-size: 22px;
+
+    opacity: .85;
+  }
+
+
+  /* =====================================================
+     DICIEMBRE — NAVIDAD
+     ===================================================== */
+
+  .tema-diciembre .tema-borde-superior {
+    background: linear-gradient(
+      90deg,
+      #315c3a,
+      #b48b3c,
+      #315c3a
+    );
+  }
+
+  .tema-diciembre .tema-luces {
+    position: absolute;
+    top: 8px;
+    left: 5%;
+    right: 5%;
+
+    height: 30px;
+
+    border-top:
+      1px solid rgba(180,140,60,.25);
+  }
+
+  .tema-diciembre .tema-luces::before {
+    content:
+      "•  •  •  •  •  •  •  •  •  •  •  •  •";
+
+    position: absolute;
+
+    top: -11px;
+    left: 0;
+
+    width: 100%;
+
+    text-align: center;
+
+    font-size: 19px;
+
+    letter-spacing: 14px;
+
+    opacity: .65;
+  }
+
+  .tema-diciembre .tema-medallon {
+    position: absolute;
+    top: 22px;
+    right: 24px;
+
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,.92);
+
+    box-shadow:
+      0 5px 18px rgba(0,0,0,.14);
+
+    font-size: 21px;
+
+    opacity: .85;
+  }
+
+
+  /* =====================================================
+     ENERO — AÑO NUEVO
+     ===================================================== */
+
+  .tema-enero .tema-borde-superior {
+    background: linear-gradient(
+      90deg,
+      #1c3557,
+      #b48b3c,
+      #1c3557
+    );
+  }
+
+  .tema-enero .tema-medallon,
+  .tema-febrero .tema-medallon,
+  .tema-primavera .tema-medallon,
+  .tema-verano .tema-medallon {
+    position: absolute;
+    top: 22px;
+    right: 24px;
+
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,.9);
+
+    box-shadow:
+      0 5px 18px rgba(0,0,0,.12);
+
+    opacity: .7;
+  }
+
+
+  /* =====================================================
+     FEBRERO
+     ===================================================== */
+
+  .tema-febrero .tema-borde-superior {
+    background: linear-gradient(
+      90deg,
+      #8f3045,
+      #d9899b,
+      #8f3045
+    );
+  }
+
+
+  /* =====================================================
+     MARZO - MAYO — PRIMAVERA
+     ===================================================== */
+
+  .tema-primavera .tema-borde-superior {
+    background: linear-gradient(
+      90deg,
+      #5c8c68,
+      #d2a84b,
+      #5c8c68
+    );
+  }
+
+
+  /* =====================================================
+     JUNIO - AGOSTO — VERANO
+     ===================================================== */
+
+  .tema-verano .tema-borde-superior {
+    background: linear-gradient(
+      90deg,
+      #2c70b7,
+      #d2a84b,
+      #2c70b7
+    );
+  }
+
+
+  /* =====================================================
+     MÓVIL
+     ===================================================== */
+
+  @media (max-width: 600px) {
+
+    .tema-septiembre .tema-papel-picado,
+    .tema-noviembre .tema-papel-picado {
+      height: 34px;
+    }
+
+    .tema-medallon {
+      transform: scale(.82);
+      transform-origin: top right;
+    }
+
+    .tema-adornos {
+      display: none;
+    }
+
+    .tema-diciembre .tema-luces {
+      left: 2%;
+      right: 2%;
+    }
+
+    .tema-diciembre .tema-luces::before {
+      font-size: 15px;
+      letter-spacing: 7px;
+    }
+
+  }
+
+</style>
+
+
+<script>
+
+(function () {
+
+  /* =====================================================
+     PERMITE PROBAR CUALQUIER MES
+
+     Ejemplo:
+     ?tema=septiembre
+
+     Si no escribes nada, utiliza automáticamente
+     el mes real.
+     ===================================================== */
+
+  const parametros =
+    new URLSearchParams(
+      window.location.search
+    );
+
+  const vistaPrevia =
+    parametros.get("tema");
+
+
+  const meses = {
+
+    enero: 0,
+    febrero: 1,
+    marzo: 2,
+    abril: 3,
+    mayo: 4,
+    junio: 5,
+    julio: 6,
+    agosto: 7,
+    septiembre: 8,
+    octubre: 9,
+    noviembre: 10,
+    diciembre: 11
+
+  };
+
+
+  let mesActual;
+
+
+  if (
+    vistaPrevia &&
+    meses[vistaPrevia] !== undefined
+  ) {
+
+    mesActual =
+      meses[vistaPrevia];
+
+  } else {
+
+    mesActual =
+      new Date().getMonth();
+
+  }
+
+
+  /* =====================================================
+     NOMBRE DE LA TEMÁTICA
+     ===================================================== */
+
+  let tema;
+
+
+  if (mesActual === 0) {
+
+    tema = "tema-enero";
+
+  } else if (mesActual === 1) {
+
+    tema = "tema-febrero";
+
+  } else if (
+    mesActual >= 2 &&
+    mesActual <= 4
+  ) {
+
+    tema = "tema-primavera";
+
+  } else if (
+    mesActual >= 5 &&
+    mesActual <= 7
+  ) {
+
+    tema = "tema-verano";
+
+  } else if (mesActual === 8) {
+
+    tema = "tema-septiembre";
+
+  } else if (mesActual === 9) {
+
+    tema = "tema-octubre";
+
+  } else if (mesActual === 10) {
+
+    tema = "tema-noviembre";
+
+  } else {
+
+    tema = "tema-diciembre";
+
+  }
+
+
+  /* =====================================================
+     UTILIZAR LA CAPA EXISTENTE
+
+     Así NO se crea otra estructura.
+     ===================================================== */
+
+  let capa =
+    document.getElementById(
+      "tema-mensual"
+    );
+
+
+  if (!capa) {
+
+    capa =
+      document.createElement("div");
+
+    capa.id =
+      "tema-mensual";
+
+    document.body.appendChild(
+      capa
+    );
+
+  }
+
+
+  /* =====================================================
+     LIMPIAR TEMÁTICA ANTERIOR
+     ===================================================== */
+
+  capa.innerHTML = "";
+
+  capa.className = tema;
+
+
+  /* =====================================================
+     BORDE SUPERIOR
+     ===================================================== */
+
+  const borde =
+    document.createElement("div");
+
+  borde.className =
+    "tema-borde-superior";
+
+  capa.appendChild(
+    borde
+  );
+
+
+  /* =====================================================
+     SEPTIEMBRE
+     ===================================================== */
+
+  if (mesActual === 8) {
+
+    const papel =
+      document.createElement("div");
+
+    papel.className =
+      "tema-papel-picado";
+
+    capa.appendChild(
+      papel
+    );
+
+
+    const medallon =
+      document.createElement("div");
+
+    medallon.className =
+      "tema-medallon";
+
+    medallon.textContent =
+      "🇲🇽";
+
+    capa.appendChild(
+      medallon
+    );
+
+
+    const adornos =
+      document.createElement("div");
+
+    adornos.className =
+      "tema-adornos";
+
+    adornos.textContent =
+      "🇲🇽  ✦  🇲🇽";
+
+    capa.appendChild(
+      adornos
+    );
+
+  }
+
+
+  /* =====================================================
+     OCTUBRE
+     ===================================================== */
+
+  if (mesActual === 9) {
+
+    const medallon =
+      document.createElement("div");
+
+    medallon.className =
+      "tema-medallon";
+
+    medallon.textContent =
+      "🎃";
+
+    capa.appendChild(
+      medallon
+    );
+
+
+    const adornos =
+      document.createElement("div");
+
+    adornos.className =
+      "tema-adornos";
+
+    adornos.textContent =
+      "✦  ✦  ✦";
+
+    capa.appendChild(
+      adornos
+    );
+
+  }
+
+
+  /* =====================================================
+     NOVIEMBRE
+     ===================================================== */
+
+  if (mesActual === 10) {
+
+    const papel =
+      document.createElement("div");
+
+    papel.className =
+      "tema-papel-picado";
+
+    capa.appendChild(
+      papel
+    );
+
+
+    const medallon =
+      document.createElement("div");
+
+    medallon.className =
+      "tema-medallon";
+
+    medallon.textContent =
+      "🌼";
+
+    capa.appendChild(
+      medallon
+    );
+
+  }
+
+
+  /* =====================================================
+     DICIEMBRE
+     ===================================================== */
+
+  if (mesActual === 11) {
+
+    const luces =
+      document.createElement("div");
+
+    luces.className =
+      "tema-luces";
+
+    capa.appendChild(
+      luces
+    );
+
+
+    const medallon =
+      document.createElement("div");
+
+    medallon.className =
+      "tema-medallon";
+
+    medallon.textContent =
+      "✨";
+
+    capa.appendChild(
+      medallon
+    );
+
+  }
+
+
+  /* =====================================================
+     ENERO
+     ===================================================== */
+
+  if (mesActual === 0) {
+
+    const medallon =
+      document.createElement("div");
+
+    medallon.className =
+      "tema-medallon";
+
+    medallon.textContent =
+      "✨";
+
+    capa.appendChild(
+      medallon
+    );
+
+  }
+
+
+  /* =====================================================
+     FEBRERO
+     ===================================================== */
+
+  if (mesActual === 1) {
+
+    const medallon =
+      document.createElement("div");
+
+    medallon.className =
+      "tema-medallon";
+
+    medallon.textContent =
+      "♡";
+
+    capa.appendChild(
+      medallon
+    );
+
+  }
+
+
+  /* =====================================================
+     PRIMAVERA
+     ===================================================== */
+
+  if (
+    mesActual >= 2 &&
+    mesActual <= 4
+  ) {
+
+    const medallon =
+      document.createElement("div");
+
+    medallon.className =
+      "tema-medallon";
+
+    medallon.textContent =
+      "✿";
+
+    capa.appendChild(
+      medallon
+    );
+
+  }
+
+
+  /* =====================================================
+     VERANO
+     ===================================================== */
+
+  if (
+    mesActual >= 5 &&
+    mesActual <= 7
+  ) {
+
+    const medallon =
+      document.createElement("div");
+
+    medallon.className =
+      "tema-medallon";
+
+    medallon.textContent =
+      "☀";
+
+    capa.appendChild(
+      medallon
+    );
+
+  }
+
+
+})();
+
+</script>
       }
 
     })();
