@@ -994,6 +994,13 @@ h1 {
   margin-bottom: 0.8rem;
 }
 
+.testimonial-status {
+  min-height: 1.5em;
+  margin: 0;
+  color: var(--accent);
+  font-size: 0.9rem;
+}
+
 .testimonial-form input::placeholder,
 .testimonial-form textarea::placeholder {
   color: #9bb0c9;
@@ -1001,6 +1008,8 @@ h1 {
 
 .rating-input {
   display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
   gap: 0.25rem;
 }
 
@@ -1015,7 +1024,8 @@ h1 {
 }
 
 .rating-option input:checked + span,
-.rating-option:hover span {
+.rating-option:hover span,
+.rating-option.is-selected span {
   color: #ffd166;
 }
 

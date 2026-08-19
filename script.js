@@ -96,6 +96,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const form = document.getElementById('testimonial-form');
   if (form) {
+    const ratingOptions = [...form.querySelectorAll('.rating-option')];
+
+    ratingOptions.forEach((option) => {
+      const input = option.querySelector('input');
+      if (!input) return;
+
+      input.addEventListener('change', () => {
+        const selectedRating = Number(input.value);
+        ratingOptions.forEach((ratingOption) => {
+          const ratingInput = ratingOption.querySelector('input');
+          ratingOption.classList.toggle(
+            'is-selected',
+            Number(ratingInput?.value) <= selectedRating
+          );
+        });
+      });
+    });
+
     form.addEventListener('submit', (event) => {
       event.preventDefault();
 
@@ -115,6 +133,24 @@ document.addEventListener('DOMContentLoaded', () => {
       saveTestimonials(currentTestimonials);
       renderTestimonials();
       form.reset();
+
+      const status = document.getElementById('testimonial-status');
+      const whatsappMessage = [
+        'Nueva calificación para Protesica Tepepan',
+        `Nombre: ${newTestimonial.name}`,
+        `Calificación: ${newTestimonial.rating}/5`,
+        `Comentario: ${newTestimonial.message}`
+      ].join('\n');
+
+      window.open(
+        `https://wa.me/525518547606?text=${encodeURIComponent(whatsappMessage)}`,
+        '_blank',
+        'noopener'
+      );
+
+      if (status) {
+        status.textContent = 'Comentario enviado para revisión por WhatsApp.';
+      }
     });
   }
 
