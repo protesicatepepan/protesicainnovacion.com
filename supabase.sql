@@ -3,35 +3,47 @@ create table if not exists public.testimonials (
   name text not null,
   message text not null,
   rating integer not null check (rating between 1 and 5),
+  approved boolean not null default false,
   created_at timestamptz not null default now()
 );
 
 alter table public.testimonials enable row level security;
 
+alter table public.testimonials
+  add column if not exists approved boolean not null default false;
+
+update public.testimonials
+set approved = true
+where approved = false
+  and name in ('Ana G.', 'Luis R.', 'Carmen P.');
+
+drop policy if exists "Anyone can read testimonials" on public.testimonials;
+drop policy if exists "Anyone can publish testimonials" on public.testimonials;
+
 create policy "Anyone can read testimonials"
   on public.testimonials for select
   to anon
-  using (true);
+  using (approved = true);
 
 create policy "Anyone can publish testimonials"
   on public.testimonials for insert
   to anon
-  with check (true);
+  with check (approved = false);
 
-insert into public.testimonials (name, message, rating)
-select 'Ana G.', 'Me encantó la atención, el proceso fue claro y el resultado se ve muy natural. Lo recomiendo mucho.', 5
+insert into public.testimonials (name, message, rating, approved)
+select 'Ana G.', 'Me encantó la atención, el proceso fue claro y el resultado se ve muy natural. Lo recomiendo mucho.', 5, true
 where not exists (
   select 1 from public.testimonials where name = 'Ana G.'
 );
 
-insert into public.testimonials (name, message, rating)
-select 'Luis R.', 'La precisión de la prótesis fue increíble. Me sentí acompañado en cada paso y el ajuste fue perfecto.', 5
+insert into public.testimonials (name, message, rating, approved)
+select 'Luis R.', 'La precisión de la prótesis fue increíble. Me sentí acompañado en cada paso y el ajuste fue perfecto.', 5, true
 where not exists (
   select 1 from public.testimonials where name = 'Luis R.'
 );
 
-insert into public.testimonials (name, message, rating)
-select 'Carmen P.', 'Muy profesional, humano y con tecnología moderna. La mejora en mi sonrisa fue inmediata.', 5
+insert into public.testimonials (name, message, rating, approved)
+select 'Carmen P.', 'Muy profesional, humano y con tecnología moderna. La mejora en mi sonrisa fue inmediata.', 5, true
 where not exists (
   select 1 from public.testimonials where name = 'Carmen P.'
 );

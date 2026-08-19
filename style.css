@@ -1001,6 +1001,13 @@ h1 {
   font-size: 0.9rem;
 }
 
+.contact-status {
+  min-height: 1.5em;
+  margin: 0;
+  color: var(--accent);
+  font-size: 0.9rem;
+}
+
 .testimonial-form input::placeholder,
 .testimonial-form textarea::placeholder {
   color: #9bb0c9;

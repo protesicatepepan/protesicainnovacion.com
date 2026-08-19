@@ -68,7 +68,7 @@ function renderTestimonials(testimonials) {
 
 async function getSharedTestimonials() {
   const response = await fetch(
-    `${TESTIMONIALS_ENDPOINT}?select=name,message,rating,created_at&order=created_at.desc`,
+    `${TESTIMONIALS_ENDPOINT}?select=name,message,rating,created_at&approved=eq.true&order=created_at.desc`,
     {
       headers: {
         apikey: SUPABASE_KEY,
@@ -200,11 +200,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
       saveSharedTestimonial(newTestimonial)
         .then(() => {
-          sharedTestimonials = [newTestimonial, ...sharedTestimonials];
-          renderTestimonials(sharedTestimonials);
           form.reset();
           if (status) {
-            status.textContent = 'Comentario publicado correctamente.';
+            status.textContent = 'Gracias. Tu comentario quedó pendiente de aprobación.';
           }
         })
         .catch(() => {
@@ -217,8 +215,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const contactForm = document.getElementById('contact-form');
   if (contactForm) {
+    const contactStatus = document.getElementById('contact-status');
+
     contactForm.addEventListener('submit', (event) => {
       event.preventDefault();
+
+      if (contactStatus) {
+        contactStatus.textContent = 'Preparando tu mensaje...';
+      }
 
       const clinic = document.getElementById('clinic-name')?.value.trim() || '';
       const dentist = document.getElementById('dentist-name')?.value.trim() || '';
@@ -228,8 +232,16 @@ document.addEventListener('DOMContentLoaded', () => {
       const message = document.getElementById('contact-message')?.value.trim() || '';
 
       const whatsappMessage = `Hola, envío de caso clínico.%0A%0AClínica: ${encodeURIComponent(clinic)}%0AOdontólogo: ${encodeURIComponent(dentist)}%0AEmail: ${encodeURIComponent(email)}%0ATeléfono: ${encodeURIComponent(phone)}%0AServicio: ${encodeURIComponent(service)}%0ADetalles: ${encodeURIComponent(message)}`;
-      window.open(`https://wa.me/525518547606?text=${whatsappMessage}`, '_blank', 'noopener');
-      contactForm.reset();
+      const whatsappWindow = window.open(`https://wa.me/525518547606?text=${whatsappMessage}`, '_blank', 'noopener');
+
+      if (whatsappWindow) {
+        contactForm.reset();
+        if (contactStatus) {
+          contactStatus.textContent = 'WhatsApp se abrió con tu mensaje preparado.';
+        }
+      } else if (contactStatus) {
+        contactStatus.textContent = 'No se pudo abrir WhatsApp. Revisa el bloqueo de ventanas emergentes.';
+      }
     });
   }
 });
