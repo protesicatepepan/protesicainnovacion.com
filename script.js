@@ -1,4 +1,7 @@
 const TESTIMONIALS_KEY = 'protesica-testimonials';
+const SUPABASE_URL = 'https://phjdvqofrbhmimuidthv.supabase.co';
+const SUPABASE_KEY = 'sb_publishable_r4WpLMu7yjXKAMZzOM9YTg_py2mXwD7';
+const TESTIMONIALS_ENDPOINT = `${SUPABASE_URL}/rest/v1/testimonials`;
 const INITIAL_TESTIMONIALS = [
   {
     name: 'Ana G.',
@@ -45,11 +48,10 @@ function saveTestimonials(testimonials) {
   localStorage.setItem(TESTIMONIALS_KEY, JSON.stringify(testimonials));
 }
 
-function renderTestimonials() {
+function renderTestimonials(testimonials) {
   const list = document.getElementById('testimonials-list');
   if (!list) return;
 
-  const testimonials = getTestimonials();
   list.innerHTML = testimonials
     .map((item) => {
       const stars = '★'.repeat(item.rating) + '☆'.repeat(5 - item.rating);
@@ -62,6 +64,41 @@ function renderTestimonials() {
       `;
     })
     .join('');
+}
+
+async function getSharedTestimonials() {
+  const response = await fetch(
+    `${TESTIMONIALS_ENDPOINT}?select=name,message,rating,created_at&order=created_at.desc`,
+    {
+      headers: {
+        apikey: SUPABASE_KEY,
+        Authorization: `Bearer ${SUPABASE_KEY}`
+      }
+    }
+  );
+
+  if (!response.ok) {
+    throw new Error(`Supabase respondió con ${response.status}`);
+  }
+
+  return response.json();
+}
+
+async function saveSharedTestimonial(testimonial) {
+  const response = await fetch(TESTIMONIALS_ENDPOINT, {
+    method: 'POST',
+    headers: {
+      apikey: SUPABASE_KEY,
+      Authorization: `Bearer ${SUPABASE_KEY}`,
+      'Content-Type': 'application/json',
+      Prefer: 'return=minimal'
+    },
+    body: JSON.stringify(testimonial)
+  });
+
+  if (!response.ok) {
+    throw new Error(`Supabase respondió con ${response.status}`);
+  }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -92,7 +129,22 @@ document.addEventListener('DOMContentLoaded', () => {
     footer.textContent += ` © ${year}`;
   }
 
-  renderTestimonials();
+  let sharedTestimonials = [];
+  const list = document.getElementById('testimonials-list');
+  const status = document.getElementById('testimonial-status');
+
+  getSharedTestimonials()
+    .then((testimonials) => {
+      sharedTestimonials = testimonials;
+      renderTestimonials(sharedTestimonials);
+    })
+    .catch(() => {
+      sharedTestimonials = getTestimonials();
+      renderTestimonials(sharedTestimonials);
+      if (status) {
+        status.textContent = 'No se pudieron cargar las reseñas compartidas.';
+      }
+    });
 
   const form = document.getElementById('testimonial-form');
   if (form) {
@@ -129,12 +181,6 @@ document.addEventListener('DOMContentLoaded', () => {
         rating: Number(selectedRating.value)
       };
 
-      const currentTestimonials = [newTestimonial, ...getTestimonials()];
-      saveTestimonials(currentTestimonials);
-      renderTestimonials();
-      form.reset();
-
-      const status = document.getElementById('testimonial-status');
       const whatsappMessage = [
         'Nueva calificación para Protesica Tepepan',
         `Nombre: ${newTestimonial.name}`,
@@ -149,8 +195,23 @@ document.addEventListener('DOMContentLoaded', () => {
       );
 
       if (status) {
-        status.textContent = 'Comentario enviado para revisión por WhatsApp.';
+        status.textContent = 'Guardando tu comentario...';
       }
+
+      saveSharedTestimonial(newTestimonial)
+        .then(() => {
+          sharedTestimonials = [newTestimonial, ...sharedTestimonials];
+          renderTestimonials(sharedTestimonials);
+          form.reset();
+          if (status) {
+            status.textContent = 'Comentario publicado correctamente.';
+          }
+        })
+        .catch(() => {
+          if (status) {
+            status.textContent = 'No se pudo publicar. Inténtalo de nuevo.';
+          }
+        });
     });
   }
 
