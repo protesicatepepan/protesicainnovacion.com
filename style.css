@@ -19,6 +19,31 @@
   box-sizing: border-box;
 }
 
+/* Acento mensual discreto, sin cubrir el contenido de la página. */
+#tema-mensual {
+  z-index: 90 !important;
+}
+
+#tema-mensual .tema-borde-superior {
+  height: 3px;
+  opacity: 0.7;
+}
+
+#tema-mensual .tema-medallon,
+#tema-mensual .tema-adornos,
+#tema-mensual .tema-esquina {
+  display: none !important;
+}
+
+#tema-mensual .tema-papel-picado,
+#tema-mensual .tema-luces {
+  opacity: 0.28;
+}
+
+#tema-mensual .tema-papel-picado {
+  height: 28px;
+}
+
 html {
   scroll-behavior: smooth;
 }
